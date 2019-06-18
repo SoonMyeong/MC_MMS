@@ -42,7 +42,7 @@ class MessageOrderingHandler {
 	private String srcIP = null;
 	int dstPort = 0;
 	long seqNum = -1;
-	String srcDstPair = srcMRN+"::"+dstMRN;
+	String srcDstPair = null;
 	private String SESSION_ID = "";
 	private Thread sessionBlocker = null;
 	private MMSLog mmsLog = null;
@@ -133,7 +133,7 @@ class MessageOrderingHandler {
 							//System.out.println("index="+index+", seqNum="+seqNum+", seqNum in List="+itemList.get(0).getSeqNum());
 							//System.out.println("Sequence number of message is duplicated.");
 							message = ErrorCode.SEQUENCE_NUMBER_IS_DUPLICATED.getUTF8Bytes();
-							mmsLog.info(logger, this.SESSION_ID, "Sequence number of message is duplicated.");
+							mmsLog.info(logger, this.SESSION_ID, ErrorCode.SEQUENCE_NUMBER_IS_DUPLICATED.toString());
 							return message;
 						}
 					}
@@ -148,7 +148,7 @@ class MessageOrderingHandler {
 			}
 			else { //Drop message.
 				message = ErrorCode.SEQUENCE_NUMBER_IS_OUT_OF_ORDER.getUTF8Bytes();
-				mmsLog.info(logger, this.SESSION_ID, "Sequence number of message is out of order.");
+				mmsLog.info(logger, this.SESSION_ID, ErrorCode.SEQUENCE_NUMBER_IS_OUT_OF_ORDER.toString());
 				return message;
 			}
 			//System.out.println("index="+index+", seqNum="+seqNum+", seqNum in List="+itemList.get(0).getSeqNum());
@@ -178,7 +178,7 @@ class MessageOrderingHandler {
 			}
 			try {
 				//System.out.println("RELAYING_TO_SERVER_SEQUENTIALLY getSessionID="+itemList.get(0).getSessionId());
-				if (itemList.get(0).getSessionId().equals(this.SESSION_ID)) { //MUST be THIS session.
+				if (itemList.size()>0 && itemList.get(0).getSessionId().equals(this.SESSION_ID)) { //MUST be THIS session.
 					if (SessionManager.getMapSrcDstPairAndLastSeqNum().get(srcDstPair) == itemList.get(0).getPreSeqNum() || 
 							itemList.get(0).getWaitingCount() > 0 ||
 							itemList.get(0).isExceptionOccured()) {
@@ -200,7 +200,7 @@ class MessageOrderingHandler {
 			} 
 			catch (InterruptedException e) {
 				//System.out.println("Interrupted! This session ID="+SESSION_ID+", Session ID in list="+itemList.get(0).getSessionId()+", isExceptionOccured="+itemList.get(0).isExceptionOccured()+", seq num="+seqNum+", last seq num="+SessionManager.mapSrcDstPairAndLastSeqNum.get(srcDstPair));
-				if (itemList.get(0).getSessionId().equals(this.SESSION_ID)) { //MUST be THIS session.
+				if (itemList.size()>0 && itemList.get(0).getSessionId().equals(this.SESSION_ID)) { //MUST be THIS session.
 					if ((itemList.get(0).getPreSeqNum() == SessionManager.getMapSrcDstPairAndLastSeqNum().get(srcDstPair) && 
 							!itemList.get(0).isExceptionOccured()) || itemList.get(0).getWaitingCount() > 0){
 						message = setThisSessionWaitingRes(srcDstPair);
