@@ -253,8 +253,8 @@ class MessageOrderingHandler {
 			}
 		}
 
-		// If message is null, no error occurred, otherwise an error occurred (excluding message is "OK").
-		// If thread is null, an error occurred, otherwise no error occurred (excluding message is "OK").
+		// If message is null, no error occurred, otherwise an error occurred (excluding message equals "OK").
+		// If thread is null, an error occurred, otherwise no error occurred (excluding message equals "OK").
 		return message;
 	}
 	
