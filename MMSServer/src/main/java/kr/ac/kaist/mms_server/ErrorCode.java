@@ -65,8 +65,8 @@ public enum ErrorCode {
 	CONFIGURATION_ERROR("11001","MMS Configuration error."),
 
 	// Number 18XXX is related to the relaying functions.
-	SEQUENTIAL_RELAYING_EXCEPTION_ERR("18001", "Exception error occured in sequentailly relaying function."),
-	SEQUENTIAL_RELAYING_INITIALIZATION_ERR("18002", "Initialization problem occured in sequentailly relaying function."),
+	SEQUENTIAL_RELAYING_EXCEPTION_ERROR("18001", "Exception error occured in sequentailly relaying function."),
+	SEQUENTIAL_RELAYING_INITIALIZATION_ERROR("18002", "Initialization problem occured in sequentailly relaying function."),
 	SEQUENCE_NUMBER_IS_DUPLICATED("18003","Sequence number of message is duplicated."),
 	SEQUENCE_NUMBER_IS_OUT_OF_ORDER("18004","Sequence number of message is out of order."),
 	SEQUENTIAL_RELAYING_NULL_POINTER_EXCEPTION("18005", "Null pointer exception error occured in sequentailly relaying function."),

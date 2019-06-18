@@ -172,7 +172,7 @@ class MessageOrderingHandler {
 					itemList.get(0).getSessionBlocker() == null) { //Check null pointer exception.
 				// This condition is required for safe coding when using multi-threads.
 				
-				message = ErrorCode.SEQUENTIAL_RELAYING_INITIALIZATION_ERR.getUTF8Bytes();
+				message = ErrorCode.SEQUENTIAL_RELAYING_INITIALIZATION_ERROR.getUTF8Bytes();
 				
 				throw new NullPointerException();
 			}
@@ -224,10 +224,10 @@ class MessageOrderingHandler {
 						break;
 					}
 					else if (itemList.get(0).isExceptionOccured()) {
-						message = ErrorCode.SEQUENTIAL_RELAYING_EXCEPTION_ERR.getUTF8Bytes();
+						message = ErrorCode.SEQUENTIAL_RELAYING_EXCEPTION_ERROR.getUTF8Bytes();
 						
 						printSessionsInSessionMng(srcDstPair);
-						mmsLog.info(logger, this.SESSION_ID, "Message order exception is occured. Message sequence is reset 0.");
+						mmsLog.info(logger, this.SESSION_ID, ErrorCode.SEQUENTIAL_RELAYING_EXCEPTION_ERROR.toString());
 	
 						itemList.remove(0);
 						break;
@@ -253,8 +253,8 @@ class MessageOrderingHandler {
 			}
 		}
 
-		// TODO 이 위치에 진입하면 message가 null로 설정됩니다. 적당한 할당 필요  by using Error Code 
-		// 위에 꺼를 방지하기 위해 이 위치에서 thread도 널이고, message도 널이면 message에 적당한 에러 코드를 삽입하면 좋을듯
+		// If message is null, no error occurred, otherwise an error occurred (excluding message is "OK").
+		// If thread is null, an error occurred, otherwise no error occurred (excluding message is "OK").
 		return message;
 	}
 	
