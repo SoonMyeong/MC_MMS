@@ -326,7 +326,7 @@ public class MessageParser {
 		
 		try {
 			parsePollingRequestToJSON(content);
-//			System.out.println("[Test Message] the svcMRN is " + svcMRN);
+			System.out.println("[Test Message] the svcMRN is " + svcMRN);
 //			System.out.println("[Test Message] the certificate is " + hexSignedData.substring(6));
 			isJSONOfPollingFormat = true;
 			if (this.svcMRN == null) {

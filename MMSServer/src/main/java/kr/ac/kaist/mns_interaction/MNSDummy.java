@@ -93,7 +93,7 @@ public class MNSDummy {
 
 
 	//private static final Logger logger = LoggerFactory.getLogger(MNSDummy.class);
-	//All MRN to IP Mapping is in hashmap 
+	//All MRN to IP Mapping is in hashmap
 	private static HashMap<String, String> MRNtoIP = new HashMap<String, String>();
 	//	private static HashMap<String, String> IPtoMRN = new HashMap<String, String>();
 
@@ -108,89 +108,92 @@ public class MNSDummy {
 		//       (Geo-location added version)   IP_Address:PortNumber:Model:Geo-location
 		//
 		//
-		
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000001","223.39.131.117:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-SCSession","118.220.143.130:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-kaist","172.25.0.11:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-pjh","143.248.55.117:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-test171024","219.249.186.19:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000002-kaist","172.25.0.11:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:1000005","218.39.202.78:8906:2");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC1","143.248.56.111:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC10","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC100","143.248.56.111:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC2","143.248.56.111:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC3","143.248.56.111:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC4","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC5","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC6","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC7","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC8","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:imo:imo-no:testSC9","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:mcp:vessel:smart:imo-9775763","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:client:sv40","106.240.253.98:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msc","114.141.253.194:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msc2","114.141.253.194:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msp","114.141.253.194:8956:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msp2","114.141.253.194:8959:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:msc1-20170914","175.244.145.136:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:device:msr-gw","114.141.253.194:8955:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:msr1-20170914","221.162.236.234:8982:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server","223.39.131.117:8902:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-kaist","143.248.57.72:8902:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-middle-test171024","223.39.131.117:20001:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-pjh","143.248.55.117:8902:2");
-		MRNtoIP.put("urn:mrn:smart-navi:device:vdes-msc","114.141.253.194:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:instance:mag-1","114.141.253.194:8957:2");
-		MRNtoIP.put("urn:mrn:smart-navi:s:kjesv40","203.250.182.203:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:s:kriso","203.250.182.203:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:s:krisosv40","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:s:sv40","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:smart-navi:service:kjesv40","1.220.41.11:8902:2");
-		MRNtoIP.put("urn:mrn:smart-navi:service:sv40","1.220.41.11:8088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:NXDDS","106.248.228.114:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:NXRESULT","106.248.228.114:7090:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S10","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S11","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S20","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S30","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S40","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S51","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S52","203.250.182.94:7088:2");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:kje","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:kriso","203.250.182.203:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors10","1.220.41.11:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors11","203.250.182.94:7080:2");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors12","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors13","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors14","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors15","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors16","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors17","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors18","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors19","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors20","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors21","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors22","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors23","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors24","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors25","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors26","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors27","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors28","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors29","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp101fors10","118.220.143.130:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp200fors20","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp200fors21","1.1.1.1:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp300fors30","203.250.182.203:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp400fors40","223.39.130.133:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp510fors51","106.255.156.52:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors52","203.250.182.203:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors53","119.197.77.106:0:1");
-		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors55","203.250.182.203:0:1");
+		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","127.0.0.1:0:1");
+		MRNtoIP.put("urn:mrn:imo:imo-no:1000002","127.0.0.1:0:2");
+		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server","127.0.0.1:8902:2");
 
-		
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000001","223.39.131.117:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-SCSession","118.220.143.130:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-kaist","172.25.0.11:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-pjh","143.248.55.117:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-test171024","219.249.186.19:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000002-kaist","172.25.0.11:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:1000005","218.39.202.78:8906:2");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC1","143.248.56.111:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC10","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC100","143.248.56.111:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC2","143.248.56.111:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC3","143.248.56.111:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC4","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC5","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC6","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC7","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC8","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:imo:imo-no:testSC9","143.248.55.83:0:1");
+//		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:mcp:vessel:smart:imo-9775763","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:client:sv40","106.240.253.98:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msc","114.141.253.194:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msc2","114.141.253.194:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msp","114.141.253.194:8956:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msp2","114.141.253.194:8959:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:msc1-20170914","175.244.145.136:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:msr-gw","114.141.253.194:8955:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:msr1-20170914","221.162.236.234:8982:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server","223.39.131.117:8902:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-kaist","143.248.57.72:8902:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-middle-test171024","223.39.131.117:20001:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server-pjh","143.248.55.117:8902:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:device:vdes-msc","114.141.253.194:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:instance:mag-1","114.141.253.194:8957:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:s:kjesv40","203.250.182.203:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:s:kriso","203.250.182.203:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:s:krisosv40","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:s:sv40","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:smart-navi:service:kjesv40","1.220.41.11:8902:2");
+//		MRNtoIP.put("urn:mrn:smart-navi:service:sv40","1.220.41.11:8088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:NXDDS","106.248.228.114:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:NXRESULT","106.248.228.114:7090:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S10","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S11","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S20","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S30","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S40","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S51","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:service:instance:mof:S52","203.250.182.94:7088:2");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:kje","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:kriso","203.250.182.203:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors10","1.220.41.11:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors11","203.250.182.94:7080:2");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors12","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors13","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors14","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors15","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors16","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors17","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors18","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors19","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors20","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors21","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors22","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors23","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors24","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors25","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors26","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors27","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors28","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp100fors29","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp101fors10","118.220.143.130:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp200fors20","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp200fors21","1.1.1.1:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp300fors30","203.250.182.203:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp400fors40","223.39.130.133:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp510fors51","106.255.156.52:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors52","203.250.182.203:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors53","119.197.77.106:0:1");
+//		MRNtoIP.put("urn:mrn:smart:vessel:imo-no:mof:tmp520fors55","203.250.182.203:0:1");
+
+
 		// LOCAL TEST //
 		MRNtoIP.put("urn:mrn:imo:imo-no:ts-mms-01-client","127.0.0.1:0:1");
 		MRNtoIP.put("urn:mrn:imo:imo-no:ts-mms-01-server","192.168.0.5:8907:2");
@@ -232,8 +235,8 @@ public class MNSDummy {
 				connectionSocket.shutdownInput();
 			}
 			String data = buf.toString();
-			
-			
+
+
 			// newly designed interfaces
 			if (data.startsWith("{")) {
 				try {
@@ -273,7 +276,7 @@ public class MNSDummy {
 						}
 
 
-					} 
+					}
 					else if (query.get("geocasting_circle") != null) {
 						JSONObject geocastingQuery = (JSONObject) query.get("geocasting_circle");
 						String srcMRN = geocastingQuery.get("srcMRN").toString();
@@ -282,7 +285,7 @@ public class MNSDummy {
 						String geoLong = geocastingQuery.get("long").toString();
 						String geoRadius = geocastingQuery.get("radius").toString();
 
-						float lat = Float.parseFloat(geoLat); 
+						float lat = Float.parseFloat(geoLat);
 						float lon = Float.parseFloat(geoLat);
 						float rad = Float.parseFloat(geoRadius);
 
@@ -301,7 +304,7 @@ public class MNSDummy {
 									String[] parsedVal = value.split(":");
 									if (parsedVal.length == 4){ // Geo-information exists.
 										String[] curGeoMRN = parsedVal[3].split("-");
-										float curLat = Float.parseFloat(curGeoMRN[1]); 
+										float curLat = Float.parseFloat(curGeoMRN[1]);
 										float curLong = Float.parseFloat(curGeoMRN[3]);
 
 
@@ -331,7 +334,7 @@ public class MNSDummy {
 						String dstMRN = geocastingQuery.get("dstMRN").toString();
 						String geoLat = geocastingQuery.get("lat").toString();
 						String geoLong = geocastingQuery.get("long").toString();
-						
+
 						System.out.println("Geocating polygon, srcMRN="+srcMRN+", dstMRN="+dstMRN+", geoLat="+geoLat+", geoLong="+geoLong);
 						dataToReply = "[{\"exception\":\"absent MRN\"}]";
 					}
@@ -346,7 +349,7 @@ public class MNSDummy {
 						pw.close();
 					}
 					if (br != null) {
-						br.close();						
+						br.close();
 					}
 					if (in != null) {
 						in.close();
@@ -390,7 +393,7 @@ public class MNSDummy {
 							pw.close();
 						}
 						if (br != null) {
-							br.close();						
+							br.close();
 						}
 						if (in != null) {
 							in.close();
@@ -406,7 +409,7 @@ public class MNSDummy {
 					String geoMRN = data.substring(34);
 					String[] parsedGeoMRN = geoMRN.split("-");
 					//loggerinfo("Geocasting MRN="+geoMRN+".");
-					float lat = Float.parseFloat(parsedGeoMRN[1]); 
+					float lat = Float.parseFloat(parsedGeoMRN[1]);
 					float lon = Float.parseFloat(parsedGeoMRN[3]);
 					float rad = Float.parseFloat(parsedGeoMRN[5]);
 
@@ -427,7 +430,7 @@ public class MNSDummy {
 									String[] parsedVal = value.split(":");
 									if (parsedVal.length == 4){ // Geo-information exists.
 										String[] curGeoMRN = parsedVal[3].split("-");
-										float curLat = Float.parseFloat(curGeoMRN[1]); 
+										float curLat = Float.parseFloat(curGeoMRN[1]);
 										float curLong = Float.parseFloat(curGeoMRN[3]);
 
 
@@ -455,7 +458,7 @@ public class MNSDummy {
 								pw.close();
 							}
 							if (br != null) {
-								br.close();						
+								br.close();
 							}
 							if (in != null) {
 								in.close();
@@ -464,7 +467,7 @@ public class MNSDummy {
 								connectionSocket.close();
 							}
 						}
-					} 
+					}
 					else {
 						try {
 							JSONArray objlist = new JSONArray();
@@ -482,7 +485,7 @@ public class MNSDummy {
 								pw.close();
 							}
 							if (br != null) {
-								br.close();						
+								br.close();
 							}
 							if (in != null) {
 								in.close();
@@ -493,14 +496,14 @@ public class MNSDummy {
 						}
 					}
 				}
-			} 
+			}
 			else if (data.regionMatches(0, "Location-Update:", 0, 16)){
 				try {
 					data = data.substring(16);
 
 					//loggerinfo("MNSDummy:data=" + data);
 					String[] data_sub = data.split(",");
-					
+
 					if (MRNtoIP.get(data_sub[1]) == null || MRNtoIP.get(data_sub[1]).split(":").length == 3 ) {
 						// data_sub = IP_address, MRN, Port
 						MRNtoIP.put(data_sub[1], data_sub[0] + ":" + data_sub[2] + ":" + data_sub[3]);
@@ -517,7 +520,7 @@ public class MNSDummy {
 						pw.close();
 					}
 					if (br != null) {
-						br.close();						
+						br.close();
 					}
 					if (in != null) {
 						in.close();
@@ -527,7 +530,7 @@ public class MNSDummy {
 					}
 				}
 
-			} 
+			}
 			else if (data.regionMatches(0, "Dump-MNS:", 0, 9)){
 				try {
 					if (!MRNtoIP.isEmpty()){
