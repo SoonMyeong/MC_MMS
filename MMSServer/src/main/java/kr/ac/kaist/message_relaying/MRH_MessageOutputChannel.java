@@ -157,6 +157,9 @@ import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
 import kr.ac.kaist.mms_server.MMSLogForDebug;
 import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
 
 public class MRH_MessageOutputChannel{
 	
@@ -212,7 +215,10 @@ public class MRH_MessageOutputChannel{
     	
     	long responseLen = data.length;
     	FullHttpResponse res = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, getHttpResponseStatus(responseCode), Unpooled.copiedBuffer(data));
+		//FullHttpResponse res = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,HttpResponseStatus.OK);
+
     	if (isStoredHeader){
+
 			Set<String> resHeaderKeyset = storedHeader.keySet(); 
 			for (Iterator<String> resHeaderIterator = resHeaderKeyset.iterator();resHeaderIterator.hasNext();) {
 				String key = resHeaderIterator.next();
@@ -225,6 +231,7 @@ public class MRH_MessageOutputChannel{
 					}
 				}
 			}
+
 			isStoredHeader = false;
 			storedHeader = null;
 			
@@ -237,7 +244,7 @@ public class MRH_MessageOutputChannel{
     	f.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) {
-                assert f == future; //TODO Requeueing function MUST be implemented.  
+                assert f == future; //TODO Requeueing function MUST be implemented. , HTTP Response 200 떨어지는 순간
                 
                 ctx.close();
             }
@@ -415,7 +422,7 @@ public class MRH_MessageOutputChannel{
 		setResponseHeader(resHeaders);
 		
 		
-		
+
 		InputStream is = con.getInputStream();
 		ByteArrayOutputStream byteOS = new ByteArrayOutputStream();
 		
@@ -443,13 +450,60 @@ public class MRH_MessageOutputChannel{
 	public byte[] sendMessage(FullHttpRequest req, String IPAddress, int port, HttpMethod httpMethod, String srcMRN, String dstMRN) throws IOException {  
 		return getResponseMessage(requestMessage(req, IPAddress, port, httpMethod, srcMRN, dstMRN));
 	}
-	
-	public ConnectionThread asynchronizeSendMessage(FullHttpRequest req, String IPAddress, int port, HttpMethod httpMethod, String srcMRN, String dstMRN) throws IOException {  
+
+	private byte[] data;
+
+	public ConnectionThread asynchronizeSendMessage(FullHttpRequest req, String IPAddress, int port, HttpMethod httpMethod, String srcMRN, String dstMRN) throws IOException {
 		HttpURLConnection con = requestMessage(req, IPAddress, port, httpMethod, srcMRN, dstMRN);
+		try {
+			data = getResponseMessage(con);
+		}
+		catch (IOException e) {
+			mmsLog.info(logger, SESSION_ID, ErrorCode.MESSAGE_RELAYING_FAIL_UNREACHABLE.toString());
+		}
+		finally {
+			if (data == null) {
+				data = ErrorCode.MESSAGE_RELAYING_FAIL_UNREACHABLE.getUTF8Bytes();
+			}
+			replyToSender(ctx, data);
+		}
+
 		return new ConnectionThread(con);
 	}
 
-	
+//	// Test
+//	public void sendMessageTest(FullHttpRequest req, String IPAddress, int port, HttpMethod httpMethod, String srcMRN, String dstMRN){
+//		String url = "http://" + IPAddress + ":" + port + req.uri();
+//        WebClient webClient = WebClient.builder().build();
+//        Mono<String> sendMessage = webClient.post().uri(url)
+//									.header("dstMRN",dstMRN)
+//									.header("srcMRN",srcMRN)
+//									.syncBody(req.content()).retrieve().bodyToMono(String.class);
+//
+//
+//		sendMessage.subscribe(
+//				s->{
+//					System.out.println("sending message..");
+//				}, //onNext(T) 값이 넘어 올 때 출력
+//				error->{
+//					System.err.println("sending error");
+//				}, // 에러 발생시 출력
+//				()->{
+//					System.out.println("send complete");
+//					replyToSender(ctx,null);
+//				}// 정상 종료시 출력
+//		);
+//
+//		String urlParameters = req.content().toString(Charset.forName("UTF-8")).trim();
+//		// get request doesn't have http body
+//		if (logger.isTraceEnabled()) {
+//			mmsLog.trace(logger, this.SESSION_ID, (httpMethod==httpMethod.POST?"POST":"GET")+" request to URL=" + url + "\n"
+//					+ (httpMethod==httpMethod.POST?"POST":"GET")+" parameters=" + urlParameters+"\n");
+//		}
+//
+//
+//	}
+
 	// To do secure relaying
 	public byte[] secureSendMessage(FullHttpRequest req, String IPAddress, int port, HttpMethod httpMethod, String srcMRN, String dstMRN) throws NullPointerException, IOException { // 
 		HttpURLConnection con = requestSecureMessage(req, IPAddress, port, httpMethod, srcMRN, dstMRN);
@@ -624,12 +678,15 @@ public class MRH_MessageOutputChannel{
 		public void terminate() {
 			data = null;
 	       	con.disconnect();
+
 	       	try {
 				con.getInputStream().close();
 			} 
 	       	catch (IOException e) {
 	       		mmsLog.info(logger, SESSION_ID, ErrorCode.MESSAGE_RELAYING_FAIL_DISCONNECT.toString());
 			}
+
+
 	    }
 		public byte[] getData() {
 			return data;

@@ -42,6 +42,9 @@ Modifier : Jaehee Ha (jaehee.ha@kaist.ac.kr)
 public class ServiceProvider {
 	public static void main(String args[]) throws Exception{
 		String myMRN = "urn:mrn:smart-navi:device:tm-server";
+        //String myMRN = "urn:mrn:smart:service:instance:mof:S40";
+        //String myMRN = "EncZoneRes";
+
 		int port = 8902;
 
 		MMSConfiguration.MMS_URL="127.0.0.1:8088";
@@ -58,6 +61,7 @@ public class ServiceProvider {
 			}
 		});
 		String context = "/forwarding";
+		//String context = "/";
 		server.setServerPort(port, context, new MMSClientHandler.RequestCallback() {
 			//Request Callback from the request message
 			//it is called when client receives a message

@@ -1,93 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MMSClient:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="768ced70-ff2a-4e47-8242-be4dab38e527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/ServiceProvider/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/ServiceProvider/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/ServiceProvider/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Certificate_POUL_LOWENORN_active.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Certificate_POUL_LOWENORN_revoked.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrivateKey_POUL_LOWENORN_active.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrivateKey_POUL_LOWENORN_revoked.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SCPoulLowenorn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examples/Geocasting/ServiceProvider-GEO-Circle/ServiceProvider-GEO-Circle.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/SC5/SC5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MMSClient_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServiceProvider_GEO_Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/SCPoulLowenorn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/.idea/artifacts/MMSService_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/reactive-streams-1.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/reactor-core-3.2.11.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-amqp-2.1.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-core-5.1.8.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-webflux-5.1.8.RELEASE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SC1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SC1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SC2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SC2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SCPoulLowenorn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SCPoulLowenorn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/MMSService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/MMSService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/classes/" />
-    <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SCPoulLowenorn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="72" column="11" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1068">
-              <caret line="307" column="59" selection-start-line="307" selection-start-column="57" selection-end-line="307" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSPollHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="83" column="18" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="18" />
-              <folding>
-                <element signature="e#4856#4857#0" expanded="true" />
-                <element signature="e#4897#4898#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SC2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ServiceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -97,66 +60,25 @@
       <find>polling</find>
       <find>certificate</find>
       <find>request</find>
+      <find>sendPost</find>
+      <find>long po</find>
+      <find>pollInterval</find>
+      <find>startGeoReporting</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/SC2.java" />
-        <option value="$PROJECT_DIR$/src/SC1.java" />
-        <option value="$PROJECT_DIR$/src/SCPoulLowenorn.java" />
-        <option value="$PROJECT_DIR$/src/ServiceProvider.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/MMSClient.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/../Examples/Simple examples/SC1/SC1.iml" />
-        <option value="$PROJECT_DIR$/../Examples/Simple examples/SC2/SC2.iml" />
-        <option value="$PROJECT_DIR$/../Examples/Simple examples/ServiceProvider/ServiceProvider.iml" />
-        <option value="$PROJECT_DIR$/../Examples/Polling client verification/SCPoulLowenorn/SCPoulLowenorn.iml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="78" />
-    <option name="y" value="82" />
-    <option name="width" value="1717" />
-    <option name="height" value="912" />
-  </component>
+  <component name="ProjectId" id="1OxABzeJCVE6gDGj5wKRyu3GA5N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MMSClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MMSClient" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -165,6 +87,7 @@
       <recent name="D:\MC_MMS\MMSClient" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kr.ac.kaist.mms_client" />
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -183,7 +106,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SC2">
+  <component name="RunManager" selected="Application.ServiceProvider (1)">
     <configuration name="SC1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SC1" />
       <module name="MMSClient" />
@@ -205,6 +128,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceProvider (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.ac.kaist.mms_client.ServiceProvider" />
+      <module name="MMSClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.ac.kaist.mms_client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceProvider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ServiceProvider" />
       <module name="MMSClient" />
@@ -214,9 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SC2" />
-        <item itemvalue="Application.ServiceProvider" />
+        <item itemvalue="Application.ServiceProvider (1)" />
         <item itemvalue="Application.SCPoulLowenorn" />
+        <item itemvalue="Application.ServiceProvider" />
+        <item itemvalue="Application.SC2" />
         <item itemvalue="Application.SC1" />
       </list>
     </recent_temporary>
@@ -234,136 +171,28 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="306" y="2" width="1373" height="729" extended-state="0" />
-    <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23686215" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" weight="0.32885906" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.50503355" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="698" column="29" selection-start-line="698" selection-start-column="29" selection-end-line="698" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/SecureMMSRcvHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSGeoInfoReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSPollHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="83" column="18" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="18" />
-          <folding>
-            <element signature="e#4856#4857#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1068">
-          <caret line="307" column="59" selection-start-line="307" selection-start-column="57" selection-end-line="307" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SC1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SC2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Certificate_POUL_LOWENORN_active.pem">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Certificate_POUL_LOWENORN_revoked.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrivateKey_POUL_LOWENORN_active.pem">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SCPoulLowenorn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="72" column="11" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>MMSClient:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -371,6 +200,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

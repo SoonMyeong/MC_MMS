@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MMSClient:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/MMSClient_jar</output-path>
+    <root id="archive" name="MMSClient.jar">
+      <element id="module-output" name="MMSClient" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../MMSServer/External Jars/pkilib-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/Certificate_POUL_LOWENORN_active.pem" />
+      <element id="file-copy" path="$PROJECT_DIR$/Certificate_POUL_LOWENORN_revoked.pem" />
+      <element id="file-copy" path="$PROJECT_DIR$/PrivateKey_POUL_LOWENORN_active.pem" />
+      <element id="file-copy" path="$PROJECT_DIR$/PrivateKey_POUL_LOWENORN_revoked.pem" />
+    </root>
+  </artifact>
+</component>

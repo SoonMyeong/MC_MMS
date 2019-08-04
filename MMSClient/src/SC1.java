@@ -50,7 +50,7 @@ public class SC1 {
 		//Service Consumer cannot be HTTP server and should poll from MMS. 
 		MMSClientHandler polling = new MMSClientHandler(myMRN);
 		
-		int pollInterval = 3000; // Unit is millisecond.
+		int pollInterval = 1000; // Unit is millisecond.
 		String dstMRN = "urn:mrn:smart-navi:device:mms1";
 		String svcMRN = "urn:mrn:smart-navi:device:tm-server";
 		polling.startPolling(dstMRN, svcMRN, "ABC",pollInterval,new MMSClientHandler.PollingResponseCallback() {

@@ -38,6 +38,7 @@ public class SCPoulLowenorn {
 		String dstMRN = "urn:mrn:smart-navi:device:mms1";
 		//String svcMRN = "urn:mrn:smart-navi:device:service-provider";
 		String svcMRN = "urn:mrn:smart-navi:device:tm-server";
+		//String svcMRN = "urn:mrn:smart:service:instance:mof:S40";
 		
 		ClientPKILibrary clientPKILib = ClientPKILibrary.getInstance();
 		ByteConverter byteConverter = ByteConverter.getInstance();

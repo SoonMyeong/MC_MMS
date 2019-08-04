@@ -71,12 +71,12 @@ public class SC2 {
 		});
 		
 		
-		for (int i = 0; i < 10;i++){
+		for (int i = 0; i < 1;i++){
 			String dstMRN = "urn:mrn:smart-navi:device:tm-server";
 			String location = "/forwarding";
 			String message = "안녕 hi \"hello\" " + i;
 			sender.sendPostMsg(dstMRN, location, message);
-			Thread.sleep(1000);
+			Thread.sleep(5);
 		}
 		
 		

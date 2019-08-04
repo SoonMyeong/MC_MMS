@@ -36,14 +36,14 @@ Modifier : Jaehee Ha (jaehee.ha@kaist.ac.kr)
  */
 public class MMSConfiguration {
 	private String TAG = "[MMSConfiguration] ";
-	public static String MMS_HOST = "127.0.0.1";
+	public static String MMS_HOST = "172.18.0.2";
 	public static int MMS_PORT = 8088; //HTTPS port : 444, HTTP port : 8088
-	public static String MNS_HOST = "127.0.0.1";	
+	public static String MNS_HOST = "172.18.0.3";
 	public static int MNS_PORT = 8588;
 	public static String MMS_URL = MMS_HOST+":"+MMS_PORT;
 	public static boolean DEBUG = false;
 	public static final int LOC_UPDATE_INTERVAL = 5000;
 	public static float lat = (float)0.0;
 	public static float lon = (float)0.0;
-	public static final String USER_AGENT = "MMSClient/0.9.1";
+	public static final String USER_AGENT = "MMSClient/0.9.2";
 }

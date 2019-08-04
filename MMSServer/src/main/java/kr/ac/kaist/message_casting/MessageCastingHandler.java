@@ -191,8 +191,11 @@ public class MessageCastingHandler {
     		if (protocol.equals("http")) {
     			thread = outputChannel.asynchronizeSendMessage(req, dstIP, dstPort, httpMethod, srcMRN, dstMRN);
     			thread.start();
-    			
+                //outputChannel.asynchronizeSendMessage(req, dstIP, dstPort, httpMethod, srcMRN, dstMRN);
+
     			mmsLog.info(logger, this.SESSION_ID, "Protocol=HTTP.");
+
+
     		} 
     		else if (protocol.equals("https")) { 
     			thread = outputChannel.asynchronizeSendSecureMessage(req, dstIP, dstPort, httpMethod, srcMRN, dstMRN);

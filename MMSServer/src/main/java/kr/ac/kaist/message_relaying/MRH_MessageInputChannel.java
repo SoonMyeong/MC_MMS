@@ -111,38 +111,31 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 /* -------------------------------------------------------- */
 
 
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.util.LinkedList;
-import java.util.Random;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.HttpHeaderValues;
-import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.ssl.SslHandler;
 import io.netty.util.AttributeKey;
-import io.netty.util.ReferenceCountUtil;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel.ConnectionThread;
 import kr.ac.kaist.mms_server.ChannelTerminateListener;
 import kr.ac.kaist.mms_server.ErrorCode;
-import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
 import kr.ac.kaist.mms_server.MMSLogForDebug;
 import kr.ac.kaist.mns_interaction.MNSInteractionHandler;
 import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.util.LinkedList;
 
 
 public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHttpRequest>{
@@ -150,14 +143,12 @@ public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHtt
 	private static final Logger logger = LoggerFactory.getLogger(MRH_MessageInputChannel.class); 
 
 	private String SESSION_ID = "";
-
 	private MessageParser parser;
 	private String protocol = "";
 	private MMSLog mmsLog = null;
 	private MMSLogForDebug mmsLogForDebug = null;
     private MessageRelayingHandler relayingHandler;
     private FullHttpRequest imsg;
-	
     private String DUPLICATE_ID="";
 
 	public MRH_MessageInputChannel(String protocol) {
@@ -211,7 +202,18 @@ public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHtt
 
 			SESSION_ID = ctx.channel().id().asShortText();
 			SessionManager.getSessionInfo().put(SESSION_ID, "");
-			
+
+			/*
+			FullHttpResponse res = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,HttpResponseStatus.OK);
+			final ChannelFuture f = ctx.writeAndFlush(res);
+			f.addListener(new ChannelFutureListener() {
+				@Override
+				public void operationComplete(ChannelFuture channelFuture) throws Exception {
+					ctx.close();
+				}
+			});
+			*/
+
 			this.parser = new MessageParser(SESSION_ID);
 			try {
 				parser.parseMessage(ctx, req);
@@ -229,9 +231,11 @@ public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHtt
 
     		ctx.channel().attr(TERMINATOR).set(new LinkedList<ChannelTerminateListener>());
             relayingHandler = new MessageRelayingHandler(ctx, req, protocol, parser, SESSION_ID);
+
+
 		} 	finally {
 			// TODO Why this part is needed?
-			//req.release();
+			req.release();
 		}
 	}
 	
@@ -338,7 +342,6 @@ public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHtt
               else {
         	    	request = srcIP + ":" + srcPort;
         	    }
-        	    
         	    String srcMRN = handler.requestIPtoMRN(request);
 
         	    reqInfo = new String[2];

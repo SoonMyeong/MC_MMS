@@ -104,6 +104,8 @@ public class MNSInteractionHandler {
 	public String requestDstInfo(String srcMRN, String dstMRN, String srcIP){
 		String msg = MRNInfoQuerier.buildQuery("unicasting", srcMRN, dstMRN, srcIP);
 		return messageOutput.sendToMNS(msg);
+		//return "{\"IPAddr\":\"127.0.0.1\",\"connType\":\"push\",\"portNum\":\"8902\",\"dstMRN\":\"EncZoneRes\"}";
+		//return "{\"unicasting\":{\"srcMRN\":\"a\",\"dstMRN\":\"urn:mrn:mcl:vessel:dma:poul-lowenorn\",\"IPAddr\":\"127.0.0.1\"}}";
 	}
 	
 	@Deprecated

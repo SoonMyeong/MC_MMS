@@ -209,7 +209,7 @@ class MessageOrderingHandler {
 							return message;
 						}
 						if (type == MessageTypeDecider.msgType.RELAYING_TO_SERVER_SEQUENTIALLY) {
-							thread = mch.asynchronizedUnicast(outputChannel, req, dstIP, dstPort, protocol, httpMethod, srcMRN, dstMRN); // Execute this relaying process
+							//thread = mch.asynchronizedUnicast(outputChannel, req, dstIP, dstPort, protocol, httpMethod, srcMRN, dstMRN); // Execute this relaying process
 						}
 						else if (type == MessageTypeDecider.msgType.RELAYING_TO_SC_SEQUENTIALLY) {
 							SeamlessRoamingHandler srh = new SeamlessRoamingHandler(this.SESSION_ID);
