@@ -7,38 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768ced70-ff2a-4e47-8242-be4dab38e527" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examples/Geocasting/ServiceProvider-GEO-Circle/ServiceProvider-GEO-Circle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/SC5/SC5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MMSClient_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServiceProvider_GEO_Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/SCPoulLowenorn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/.idea/artifacts/MMSService_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/reactive-streams-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/reactor-core-3.2.11.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-amqp-2.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-core-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSServer/External Jars/spring-webflux-5.1.8.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SC1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SC1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SC2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SC2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SCPoulLowenorn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SCPoulLowenorn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kr/ac/kaist/mms_client/MMSConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MMSServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/MMSService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/MMSService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSServer/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,22 +47,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MC_MMS\MMSClient" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MC_MMS\MMSClient\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="kr.ac.kaist.mms_client" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MC_MMS\MMSClient\src" />
+      <recent name="D:\MC_MMS\MMSClient" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -176,7 +148,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

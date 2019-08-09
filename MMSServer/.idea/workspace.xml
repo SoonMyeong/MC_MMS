@@ -7,38 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9350d2-98a9-41c0-8bba-269b3ced7bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examples/Geocasting/ServiceProvider-GEO-Circle/ServiceProvider-GEO-Circle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examples/Simple examples/SC5/SC5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSClient/.idea/artifacts/MMSClient_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSClient/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSClient/src/ServiceProvider_GEO_Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSClient/src/kr/ac/kaist/mms_client/SCPoulLowenorn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MMSClient/src/kr/ac/kaist/mms_client/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MMSService_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/External Jars/reactive-streams-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/External Jars/reactor-core-3.2.11.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/External Jars/spring-amqp-2.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/External Jars/spring-core-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/External Jars/spring-webflux-5.1.8.RELEASE.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MMSClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSClient/src/SC1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/src/SC1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSClient/src/SC2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/src/SC2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSClient/src/SCPoulLowenorn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/src/SCPoulLowenorn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSClient/src/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/src/ServiceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MMSClient/src/kr/ac/kaist/mms_client/MMSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MMSClient/src/kr/ac/kaist/mms_client/MMSConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MMSService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MMSService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_casting/MessageCastingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageInputChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MessageOrderingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/MMSService_jar/MMSService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/MMSService_jar/MMSService.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mms_server/MMSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mms_server/MMSConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MNSDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MNSInteractionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/MMSServer/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,17 +41,19 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MMSClient" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MC_MMS\MMSServer\src" />
       <recent name="D:\MC_MMS\MMSServer\External Jars" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MC_MMS\MMSServer\src\main\java\kr\ac\kaist\mms_server" />
       <recent name="D:\MC_MMS\MMSServer\External Jars" />
     </key>
   </component>
@@ -122,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MNSDummy" />
         <item itemvalue="Application.MMSServer" />
+        <item itemvalue="Application.MNSDummy" />
       </list>
     </recent_temporary>
   </component>
@@ -157,14 +133,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java</url>
-          <line>210</line>
-          <properties class="kr.ac.kaist.message_relaying.MRH_MessageOutputChannel" method="replyToSender">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/mns_interaction/MIH_MessageOutputChannel.java</url>
           <line>83</line>
           <properties class="kr.ac.kaist.mns_interaction.MIH_MessageOutputChannel" method="sendToMNS">
@@ -195,14 +163,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java</url>
-          <line>205</line>
-          <properties class="kr.ac.kaist.message_relaying.MRH_MessageOutputChannel" method="replyToSender">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java</url>
@@ -316,6 +276,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MessageRelayingHandler.java</url>
           <line>551</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java</url>
+          <line>229</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kr/ac/kaist/message_relaying/MRH_MessageOutputChannel.java</url>
+          <line>241</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

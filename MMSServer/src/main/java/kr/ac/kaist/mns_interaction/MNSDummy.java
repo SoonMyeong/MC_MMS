@@ -110,8 +110,8 @@ public class MNSDummy {
 		//
 		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","127.0.0.1:0:1");
 		MRNtoIP.put("urn:mrn:smart-navi:device:tm-server","127.0.0.1:8902:2");
-		//MRNtoIP.put("mcc_test","192.168.11.159:9000:2");
-		MRNtoIP.put("mcc_test","172.30.1.41:7088:2");
+		MRNtoIP.put("mcc_test","192.168.11.159:9000:2");
+		//MRNtoIP.put("mcc_test","172.30.1.41:7088:2");
 
 		//MRNtoIP.put("urn:mrn:imo:imo-no:1000002","127.0.0.1:0:2");
 		//MRNtoIP.put("urn:mrn:kr:service:instance:smart:namas-avs","127.0.0.1:8902:2");

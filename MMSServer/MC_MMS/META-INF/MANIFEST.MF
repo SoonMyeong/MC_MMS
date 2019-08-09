@@ -1,0 +1,96 @@
+Manifest-Version: 1.0
+Bundle-Description: OSGi Compendium Release 6, Interfaces and Classes 
+ for use in compiling bundles.
+Bundle-License: http://opensource.org/licenses/apache2.0.php; link="ht
+ tp://www.apache.org/licenses/LICENSE-2.0"; description="Apache Licens
+ e, Version 2.0"
+Bundle-SymbolicName: osgi.cmpn
+Bnd-LastModified: 1432153653300
+Bundle-ManifestVersion: 2
+Bundle-Copyright: Copyright (c) OSGi Alliance (2000, 2015). All Rights
+  Reserved.
+Bundle-DocURL: http://www.osgi.org/
+Bundle-Vendor: OSGi Alliance http://www.osgi.org/
+Import-Package: javax.microedition.io;resolution:=optional,javax.namin
+ g;resolution:=optional,javax.naming.directory;resolution:=optional,ja
+ vax.persistence;resolution:=optional;version="[1.1,2)",javax.servlet;
+ resolution:=optional;version="[2.5,3)",javax.servlet.http;resolution:
+ =optional;version="[2.5,3)",javax.sql;resolution:=optional,javax.xml.
+ parsers;resolution:=optional,org.osgi.dto;resolution:=optional;versio
+ n="[1.0,2)",org.osgi.framework;resolution:=optional;version="[1.8,2)"
+ ,org.osgi.framework.dto;resolution:=optional;version="[1.8,2)",org.os
+ gi.framework.startlevel.dto;resolution:=optional;version="[1.0,2)",or
+ g.osgi.resource;resolution:=optional;version="[1.0,2)"
+Require-Capability: osgi.compile.time.only;filter:="(&(must.not.resolv
+ e=*)(!(must.not.resolve=*)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(ver
+ sion=1.5))"
+Bundle-Developers: osgi; email=info@osgi.org; name="OSGi Alliance"; or
+ ganization="OSGi Alliance"
+Tool: Bnd-2.4.1.201501161923
+Export-Package: org.osgi.application;version="1.0";uses:="org.osgi.fra
+ mework",org.osgi.namespace.contract;version="1.0";uses:="org.osgi.res
+ ource",org.osgi.namespace.extender;version="1.0.1";uses:="org.osgi.re
+ source",org.osgi.namespace.implementation;version="1.0";uses:="org.os
+ gi.resource",org.osgi.namespace.service;version="1.0";uses:="org.osgi
+ .resource",org.osgi.service.async;version="1.0";uses:="org.osgi.frame
+ work,org.osgi.util.promise",org.osgi.service.async.delegate;version="
+ 1.0";uses:="org.osgi.util.promise",org.osgi.service.application;versi
+ on="1.1";uses:="org.osgi.framework",org.osgi.service.blueprint.contai
+ ner;version="1.0.2";uses:="org.osgi.framework,org.osgi.service.bluepr
+ int.reflect",org.osgi.service.blueprint.reflect;version="1.0.1",org.o
+ sgi.service.cm;version="1.5";uses:="org.osgi.framework",org.osgi.serv
+ ice.component;version="1.3";uses:="org.osgi.framework",org.osgi.servi
+ ce.component.annotations;version="1.3",org.osgi.service.component.run
+ time;version="1.3";uses:="org.osgi.framework,org.osgi.service.compone
+ nt.runtime.dto,org.osgi.util.promise",org.osgi.service.component.runt
+ ime.dto;version="1.3";uses:="org.osgi.dto,org.osgi.framework.dto",org
+ .osgi.service.coordinator;version="1.0.2";uses:="org.osgi.framework",
+ org.osgi.service.deploymentadmin;version="1.1";uses:="org.osgi.framew
+ ork",org.osgi.service.deploymentadmin.spi;version="1.0.1";uses:="org.
+ osgi.framework,org.osgi.service.deploymentadmin",org.osgi.service.dev
+ ice;version="1.1";uses:="org.osgi.framework",org.osgi.service.dmt;ver
+ sion="2.0.1",org.osgi.service.dmt.notification;version="2.0";uses:="o
+ rg.osgi.service.dmt",org.osgi.service.dmt.notification.spi;version="2
+ .0";uses:="org.osgi.service.dmt.notification",org.osgi.service.dmt.se
+ curity;version="2.0",org.osgi.service.dmt.spi;version="2.0";uses:="or
+ g.osgi.service.dmt",org.osgi.service.event;version="1.3.1";uses:="org
+ .osgi.framework",org.osgi.service.http;version="1.2.1";uses:="javax.s
+ ervlet,javax.servlet.http",org.osgi.service.http.context;version="1.0
+ ";uses:="javax.servlet.http,org.osgi.framework",org.osgi.service.http
+ .runtime;version="1.0";uses:="org.osgi.service.http.runtime.dto",org.
+ osgi.service.http.runtime.dto;version="1.0";uses:="org.osgi.dto,org.o
+ sgi.framework.dto",org.osgi.service.http.whiteboard;version="1.0",org
+ .osgi.service.io;version="1.0";uses:="javax.microedition.io",org.osgi
+ .service.jdbc;version="1.0";uses:="javax.sql",org.osgi.service.jndi;v
+ ersion="1.0";uses:="javax.naming,javax.naming.directory",org.osgi.ser
+ vice.jpa;version="1.0";uses:="javax.persistence",org.osgi.service.log
+ ;version="1.3";uses:="org.osgi.framework",org.osgi.service.metatype;v
+ ersion="1.3";uses:="org.osgi.framework",org.osgi.service.metatype.ann
+ otations;version="1.3",org.osgi.service.monitor;version="1.0",org.osg
+ i.service.prefs;version="1.1.1",org.osgi.service.provisioning;version
+ ="1.2",org.osgi.service.remoteserviceadmin;version="1.1.0";uses:="org
+ .osgi.framework",org.osgi.service.remoteserviceadmin.namespace;versio
+ n="1.0.0";uses:="org.osgi.resource",org.osgi.service.repository;versi
+ on="1.1";uses:="org.osgi.resource,org.osgi.util.promise",org.osgi.ser
+ vice.resolver;version="1.0.1";uses:="org.osgi.resource",org.osgi.serv
+ ice.rest;version="1.0.0",org.osgi.service.rest.client;version="1.0.0"
+ ;uses:="org.osgi.framework.dto,org.osgi.framework.startlevel.dto",org
+ .osgi.service.serviceloader;version="1.0";uses:="org.osgi.resource",o
+ rg.osgi.service.subsystem;version="1.1";uses:="org.osgi.framework,org
+ .osgi.resource",org.osgi.service.upnp;version="1.2",org.osgi.service.
+ useradmin;version="1.1";uses:="org.osgi.framework",org.osgi.service.w
+ ireadmin;version="1.0.1";uses:="org.osgi.framework",org.osgi.util.fun
+ ction;version="1.0",org.osgi.util.measurement;version="1.0.1",org.osg
+ i.util.position;version="1.0.1";uses:="org.osgi.util.measurement",org
+ .osgi.util.promise;version="1.0";uses:="org.osgi.util.function",org.o
+ sgi.util.xml;version="1.0.1";uses:="javax.xml.parsers,org.osgi.framew
+ ork"
+Bundle-Name: org.osgi:osgi.cmpn
+Bundle-Version: 6.0.0.201505202027
+Git-SHA: b0858c3b90a73ecc81055c7565fbbcbd4f76674e
+Bundle-SCM: url=https://osgi.org/git/build.git, connection=scm:git:htt
+ ps://osgi.org/git/build.git, developerConnection=scm:git:https://osgi
+ .org/git/build.git
+Git-Descriptor: hudson-build.cmpn-793
+Created-By: 1.7.0_80 (Oracle Corporation)
+
