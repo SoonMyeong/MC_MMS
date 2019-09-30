@@ -181,41 +181,24 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 */
 /* -------------------------------------------------------- */
 
-import java.awt.TrayIcon.MessageType;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.concurrent.TimeoutException;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.rabbitmq.client.AMQP;
-import com.rabbitmq.client.AlreadyClosedException;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.Consumer;
-import com.rabbitmq.client.ConsumerCancelledException;
-import com.rabbitmq.client.DefaultConsumer;
-import com.rabbitmq.client.Envelope;
-import com.rabbitmq.client.GetResponse;
+import com.rabbitmq.client.*;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
 import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
-import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel;
 import kr.ac.kaist.message_relaying.MessageTypeDecider;
 import kr.ac.kaist.message_relaying.SessionManager;
-import kr.ac.kaist.mms_server.Base64Coder;
 import kr.ac.kaist.mms_server.ChannelTerminateListener;
 import kr.ac.kaist.mms_server.ErrorCode;
 import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
-import kr.ac.kaist.mms_server.MMSLogForDebug;
 import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.concurrent.TimeoutException;
 
 
 
@@ -368,6 +351,7 @@ public class MessageQueueDequeuer extends Thread{
 	    	}
 	    	catch (IOException e) {
 	    		mmsLog.info(logger, sessionId, ErrorCode.CLIENT_DISCONNECTED.toString());
+
 	    		for (String msg : backupMsg) {
 	    			try {
 						mqChannel.basicPublish("", queueName, null, msg.getBytes());
@@ -411,6 +395,7 @@ public class MessageQueueDequeuer extends Thread{
 		    	}
 		    	catch (IOException e) {
 		    		mmsLog.info(logger, sessionId, ErrorCode.CLIENT_DISCONNECTED.toString());
+
 		    	}
 
 		    	
@@ -433,6 +418,14 @@ public class MessageQueueDequeuer extends Thread{
 			else if (pollingMethod == MessageTypeDecider.msgType.LONG_POLLING){ //If polling method is long polling
 				//Enroll a delivery listener to the queue mqChannel in order to get a message from the queue.
 				mmsLog.debug(logger, this.sessionId, "Client is waiting the message queue="+queueName+".");
+
+				/*if (SessionManager.getSessionType(sessionId) != null) {
+					SessionManager.removeSessionInfo(sessionId);
+				}
+
+				if(SeamlessRoamingHandler.getDuplicateInfoCnt(duplicateId)!=null) {
+					SeamlessRoamingHandler.releaseDuplicateInfo(duplicateId);
+				}*/
 				
 				//TODO: Even though a polling client disconnects long polling session, this DefaultConsumer holds a mqChannel.
 				//When a polling client disconnects long polling session, this DefaultConsumer have to free the mqChannel. 

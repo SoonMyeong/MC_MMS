@@ -39,16 +39,11 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 */
 /* -------------------------------------------------------- */
 
-import java.net.UnknownHostException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import kr.ac.kaist.mms_server.ErrorCode;
-import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
 import net.etri.pkilib.server.ServerPKILibrary;
 import net.etri.pkilib.tool.ByteConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ClientVerifier {
 	private static final Logger logger = LoggerFactory.getLogger(ClientVerifier.class);

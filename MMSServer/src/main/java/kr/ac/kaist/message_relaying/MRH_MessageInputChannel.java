@@ -151,12 +151,6 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 /* -------------------------------------------------------- */
 
 
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.util.LinkedList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -174,10 +168,13 @@ import kr.ac.kaist.mms_server.ErrorCode;
 import kr.ac.kaist.mms_server.MMSLog;
 import kr.ac.kaist.mms_server.MMSLogForDebug;
 import kr.ac.kaist.mns_interaction.MNSInteractionHandler;
-import io.netty.util.ReferenceCountUtil;
-import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.util.LinkedList;
 
 
 public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHttpRequest>{
@@ -239,7 +236,6 @@ public class MRH_MessageInputChannel extends SimpleChannelInboundHandler<FullHtt
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest req) throws Exception {
 		//System.out.println("Message in channelRead0");
-		
 		try {
 			mmsLog = MMSLog.getInstance();
 			mmsLogForDebug = MMSLogForDebug.getInstance();

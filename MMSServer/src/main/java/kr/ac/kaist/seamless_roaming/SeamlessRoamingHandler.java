@@ -88,28 +88,18 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 */
 /* -------------------------------------------------------- */
 
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
 import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
-import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel;
-import kr.ac.kaist.message_relaying.MessageParser;
 import kr.ac.kaist.message_relaying.MessageTypeDecider;
 import kr.ac.kaist.message_relaying.SessionManager;
 import kr.ac.kaist.message_relaying.polling_auth.ClientVerifier;
 import kr.ac.kaist.mms_server.ErrorCode;
-import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
 import kr.ac.kaist.mms_server.MMSLogForDebug;
 import kr.ac.kaist.mns_interaction.MNSInteractionHandler;
-
-import java.awt.TrayIcon.MessageType;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.HashMap;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
 
 public class SeamlessRoamingHandler {
 

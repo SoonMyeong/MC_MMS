@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="30 seconds">
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>./logs/mms-server.html</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- rollover daily -->
             <fileNamePattern>./logs/mms-server.html.%d{yyyy-MM-dd}.%i.zip</fileNamePattern>
- 
+
  			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
             	<maxFileSize>3MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <maxHistory>30</maxHistory>  <!-- keep 30 days history -->
         </rollingPolicy>
- 
+
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
      		<layout class="ch.qos.logback.classic.html.HTMLLayout">
             	<pattern>%d{HH:mm:ss.SSS}%thread%-5level%logger{35}%msg</pattern>
             </layout>
         </encoder>
     </appender>
+
+    <appender name="FILE_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/mms-server.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>./logs/mms-server.html.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>  <!-- keep 30 days history -->
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <!--<pattern>%d{HH:mm:ss.SSS}%thread%-5level%logger{35}%msg%n</pattern>-->
+            <pattern>%d{ISO8601} %thread %level %logger %msg %n</pattern>
+        </encoder>
+    </appender>
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
@@ -25,6 +44,11 @@
             </pattern>
         </encoder>
     </appender>
+
+    <logger name="kr.ac.kaist.mms_server.MMSConfiguration" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE_LOG"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
 
     <root level="DEBUG"> <!-- Log level must be in uppercase. e.g. TRACE, DEBUG, INFO, WARN, ERROR -->
         <appender-ref ref="FILE"/>
