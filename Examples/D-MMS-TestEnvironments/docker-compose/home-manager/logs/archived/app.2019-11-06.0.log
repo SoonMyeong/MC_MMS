@@ -1,0 +1,6 @@
+2019-11-06 08:46:09,937 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on 5442421fb37f with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-06 08:46:09,982 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-06 08:46:09,984 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-06 08:46:42,391 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on 5442421fb37f with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-06 08:46:42,415 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-06 08:46:42,441 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug

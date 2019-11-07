@@ -1,0 +1,24 @@
+2019-11-07 00:59:50,415 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on d620790a9b71 with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-07 00:59:50,439 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-07 00:59:50,443 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-07 00:59:58,831 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Started HomeManagerApplication in 9.437 seconds (JVM running for 10.776)
+2019-11-07 01:10:56,493 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on d620790a9b71 with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-07 01:10:56,498 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-07 01:10:56,499 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-07 01:11:03,902 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Started HomeManagerApplication in 8.466 seconds (JVM running for 9.577)
+2019-11-07 01:11:22,026 DEBUG kr.co.nexsys.mcp.homemanager.mms.controller.MMSController [http-nio-8081-exec-1] find mms, mrn :urn:mrn:smart-navi:device:mms3
+2019-11-07 01:15:34,092 DEBUG kr.co.nexsys.mcp.homemanager.mms.controller.MMSController [http-nio-8081-exec-3] find mms, mrn :urn:mrn:smart-navi:device:mms3
+2019-11-07 01:22:33,242 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on 4b87d8d962eb with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-07 01:22:33,256 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-07 01:22:33,258 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-07 01:22:40,959 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Started HomeManagerApplication in 8.654 seconds (JVM running for 9.631)
+2019-11-07 01:34:45,208 DEBUG kr.co.nexsys.mcp.homemanager.mms.controller.MMSController [http-nio-8081-exec-1] find mms, mrn :urn:mrn:smart-navi:device:mms3
+2019-11-07 01:59:23,117 DEBUG kr.co.nexsys.mcp.homemanager.mms.controller.MMSController [http-nio-8081-exec-3] find mms, mrn :urn:mrn:smart-navi:device:mms3
+2019-11-07 02:01:09,219 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on 65b6499c1161 with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-07 02:01:09,223 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-07 02:01:09,225 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-07 02:01:17,873 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Started HomeManagerApplication in 9.731 seconds (JVM running for 10.988)
+2019-11-07 02:02:09,360 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Starting HomeManagerApplication on 65b6499c1161 with PID 1 (/app/home-manager/home-manager.jar started by root in /app/home-manager)
+2019-11-07 02:02:09,466 DEBUG kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-07 02:02:09,474 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-07 02:02:36,011 INFO kr.co.nexsys.mcp.homemanager.HomeManagerApplication [main] Started HomeManagerApplication in 29.023 seconds (JVM running for 30.365)

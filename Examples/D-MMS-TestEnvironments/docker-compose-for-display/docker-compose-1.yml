@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mms:
+    environment:
+      - ENV_MMS_MRN=urn:mrn:kr:device:neonexsoft:mms1
+      - ENV_MMS_URL=http://192.168.81.57:8088
+
+
+

@@ -1,0 +1,101 @@
+spring:
+  profiles:
+    active: local
+
+mcm:
+  server:
+    port: 8588
+    boss-thread-count: 1
+    worker-thread-count: 8
+
+
+# local
+---
+spring.profiles: local
+spring.profiles.include: hsqldb-file
+
+# test
+---
+spring.profiles: test
+spring.profiles.include: hsqldb-mem
+
+# development
+---
+spring.profiles: development
+spring.profiles.include: testdb
+
+# production
+---
+spring.profiles: production
+spring.profiles.include: testdb
+
+
+# datasource - testdb
+---
+spring.profiles: testdb
+spring.profiles.include: sql-debug
+spring:
+  flyway:
+    enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/geokkurodb?useUnicode=yes&characterEncoding=UTF-8
+    username: geokkuro
+    password: geokkuro1234
+
+# datasource - hsqldb
+---
+spring.profiles: hsqldb
+spring.profiles.include: sql-debug
+spring:
+  flyway:
+    enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.HSQLDialect
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: sa
+    password:
+
+
+---
+spring.profiles: hsqldb-file
+spring.profiles.include: hsqldb
+
+spring:
+  datasource:
+    url: jdbc:hsqldb:file:./hsqldb/mcm;sql.syntax_mys=true;
+
+---
+spring.profiles: hsqldb-mem
+spring.profiles.include: hsqldb
+
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:mcm;sql.syntax_mys=true;
+
+
+---
+spring.profiles: sql-debug
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+
+
+
+

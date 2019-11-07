@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  mms:
+    ports:
+      - 8089:8088
+    environment:
+      - ENV_MMS_MRN=urn:mrn:smart-navi:device:mms2
+    volumes:
+      - ./instance02/mms/logs/:/app/mms/logs/
+      - ./instance02/mms/NAS:/NAS
+
+  mcm:
+    ports:
+      - 8589:8588
+    environment:
+      - serverNo=2
+    volumes:
+      - ./instance02/mcm/migration/:/app/mcm/migration
+      - ./instance02/mcm/logs:/app/mcm/logs
+
+  mcmdb:
+    ports:
+      - 4307:3306
+    volumes:
+      - ./instance02/mcmdb:/var/lib/mysql
+
+  redis:
+    ports:
+      - 6390:6379
+    volumes:
+      - ./instance02/redis/:/data
+
+  rabbitmq-db:
+    ports:
+      - 5673:5672
+      - 15673:15672
+      - 9081:8080
+

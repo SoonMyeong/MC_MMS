@@ -1,0 +1,24 @@
+FROM openjdk:8-jdk-alpine
+
+VOLUME /app/mcm/logs
+VOLUME /app/mcm/migration
+
+ENV dbHost localhost
+ENV dbPort 3306
+ENV dbUser mcm
+ENV dbPassword mcm1234
+ENV flywayLocations filesystem:/app/mcm/migration
+
+EXPOSE 8588
+
+COPY ./mcm/build/libs/mcm*.jar /app/mcm/mcm.jar
+RUN ["chmod", "+x", "/app/mcm/mcm.jar"]
+
+WORKDIR /app/mcm/
+ENTRYPOINT java -jar \
+ -Dspring.profiles.active=development \
+ -Dspring.datasource.url="jdbc:mysql://$dbHost:$dbPort/mcmdb?useUnicode=yes&characterEncoding=UTF-8" \
+ -Dspring.datasource.username=$dbUser \
+ -Dspring.datasource.password=$dbPassword \
+ -Dspring.flyway.locations="classpath:db.migration,$flywayLocations" \
+  mcm.jar

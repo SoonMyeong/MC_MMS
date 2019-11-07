@@ -1,0 +1,6 @@
+2019-11-06 08:46:15,388 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] Starting McmApplication on 6c957c8e1269 with PID 1 (/app/mcm/mcm.jar started by root in /app/mcm)
+2019-11-06 08:46:15,410 DEBUG kr.co.nexsys.mcp.mcm.McmApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-06 08:46:15,412 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-06 08:46:38,531 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] Starting McmApplication on 6c957c8e1269 with PID 1 (/app/mcm/mcm.jar started by root in /app/mcm)
+2019-11-06 08:46:38,571 DEBUG kr.co.nexsys.mcp.mcm.McmApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-06 08:46:38,575 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] The following profiles are active: development,testdb,sql-debug

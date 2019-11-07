@@ -1,0 +1,263 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 42192 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:389), pid=20372, tid=0x0000000000005324
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_202-b08) (build 1.8.0_202-b08)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.202-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001e574000):  JavaThread "Attach Listener" daemon [_thread_in_native, id=21284, stack(0x000000001eb90000,0x000000001ec90000)]
+
+Stack: [0x000000001eb90000,0x000000001ec90000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 231  java.lang.ClassLoader.findBootstrapClass(Ljava/lang/String;)Ljava/lang/Class; (0 bytes) @ 0x0000000002e3cacf [0x0000000002e3ca80+0x4f]
+J 140 C1 java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; (122 bytes) @ 0x0000000002df9b64 [0x0000000002df9340+0x824]
+J 228 C1 java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class; (7 bytes) @ 0x0000000002e3e98c [0x0000000002e3e880+0x10c]
+j  java.util.ResourceBundle$RBClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+10
+j  java.util.ResourceBundle$Control.newBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/util/ResourceBundle;+24
+j  java.util.ResourceBundle.loadBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/ResourceBundle$Control;Z)Ljava/util/ResourceBundle;+54
+j  java.util.ResourceBundle.findBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/List;ILjava/util/ResourceBundle$Control;Ljava/util/ResourceBundle;)Ljava/util/ResourceBundle;+213
+j  java.util.ResourceBundle.findBundle(Ljava/util/ResourceBundle$CacheKey;Ljava/util/List;Ljava/util/List;ILjava/util/ResourceBundle$Control;Ljava/util/ResourceBundle;)Ljava/util/ResourceBundle;+37
+j  java.util.ResourceBundle.getBundleImpl(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/ClassLoader;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+187
+j  java.util.ResourceBundle.getBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;+9
+j  sun.util.resources.LocaleData$1.run()Ljava/util/ResourceBundle;+11
+j  sun.util.resources.LocaleData$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 405  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object; (0 bytes) @ 0x0000000002ea8292 [0x0000000002ea8240+0x52]
+j  sun.util.resources.LocaleData.getBundle(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;+9
+j  sun.util.resources.LocaleData.getTimeZoneNames(Ljava/util/Locale;)Lsun/util/resources/TimeZoneNamesBundle;+26
+j  sun.util.locale.provider.LocaleResources.getTimeZoneNames(Ljava/lang/String;)[Ljava/lang/String;+76
+j  sun.util.locale.provider.TimeZoneNameProviderImpl.getDisplayNameArray(Ljava/lang/String;Ljava/util/Locale;)[Ljava/lang/String;+22
+j  sun.util.locale.provider.TimeZoneNameProviderImpl.getDisplayName(Ljava/lang/String;ZILjava/util/Locale;)Ljava/lang/String;+4
+j  sun.util.locale.provider.TimeZoneNameUtility$TimeZoneNameGetter.getName(Ljava/util/spi/TimeZoneNameProvider;Ljava/util/Locale;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;+126
+j  sun.util.locale.provider.TimeZoneNameUtility$TimeZoneNameGetter.getObject(Ljava/util/spi/TimeZoneNameProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;+49
+j  sun.util.locale.provider.TimeZoneNameUtility$TimeZoneNameGetter.getObject(Ljava/util/spi/LocaleServiceProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+9
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObjectImpl(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;ZLjava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+40
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObject(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+7
+j  sun.util.locale.provider.TimeZoneNameUtility.retrieveDisplayNamesImpl(Ljava/lang/String;Ljava/util/Locale;)[Ljava/lang/String;+140
+j  sun.util.locale.provider.TimeZoneNameUtility.retrieveDisplayName(Ljava/lang/String;ZILjava/util/Locale;)Ljava/lang/String;+2
+j  java.util.TimeZone.getDisplayName(ZILjava/util/Locale;)Ljava/lang/String;+47
+j  java.util.Date.toString()Ljava/lang/String;+150
+j  java.util.Properties.store0(Ljava/io/BufferedWriter;Ljava/lang/String;Z)V+29
+j  java.util.Properties.store(Ljava/io/OutputStream;Ljava/lang/String;)V+20
+j  sun.misc.VMSupport.serializePropertiesToByteArray(Ljava/util/Properties;)[B+77
+j  sun.misc.VMSupport.serializePropertiesToByteArray()[B+3
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001e5de800 JavaThread "Service Thread" daemon [_thread_blocked, id=19208, stack(0x000000001f090000,0x000000001f190000)]
+  0x000000001e5d7800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=1064, stack(0x000000001ef90000,0x000000001f090000)]
+  0x000000001e5d3800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=10784, stack(0x000000001ee90000,0x000000001ef90000)]
+  0x000000001e5cd800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=21224, stack(0x000000001ed90000,0x000000001ee90000)]
+  0x000000001e527800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=23388, stack(0x000000001ec90000,0x000000001ed90000)]
+=>0x000000001e574000 JavaThread "Attach Listener" daemon [_thread_in_native, id=21284, stack(0x000000001eb90000,0x000000001ec90000)]
+  0x000000001e573800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=23492, stack(0x000000001ea90000,0x000000001eb90000)]
+  0x0000000002c9e800 JavaThread "Finalizer" daemon [_thread_blocked, id=21168, stack(0x000000001e8f0000,0x000000001e9f0000)]
+  0x0000000002c97000 JavaThread "Reference Handler" daemon [_thread_blocked, id=22112, stack(0x000000001e3f0000,0x000000001e4f0000)]
+  0x000000000274e000 JavaThread "main" [_thread_in_native, id=21084, stack(0x0000000002aa0000,0x0000000002ba0000)]
+
+Other Threads:
+  0x000000001c62a000 VMThread [stack: 0x000000001e2f0000,0x000000001e3f0000] [id=19652]
+  0x000000001e5fd000 WatcherThread [stack: 0x000000001f190000,0x000000001f290000] [id=20420]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c3400000, size: 4044 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75776K, used 23446K [0x000000076bc00000, 0x0000000771080000, 0x00000007c0000000)
+  eden space 65024K, 36% used [0x000000076bc00000,0x000000076d2e5a58,0x000000076fb80000)
+  from space 10752K, 0% used [0x0000000770600000,0x0000000770600000,0x0000000771080000)
+  to   space 10752K, 0% used [0x000000076fb80000,0x000000076fb80000,0x0000000770600000)
+ ParOldGen       total 173568K, used 0K [0x00000006c3400000, 0x00000006cdd80000, 0x000000076bc00000)
+  object space 173568K, 0% used [0x00000006c3400000,0x00000006c3400000,0x00000006cdd80000)
+ Metaspace       used 11012K, capacity 11250K, committed 11520K, reserved 1058816K
+  class space    used 1371K, capacity 1443K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x0000000012060000,0x0000000012850000] byte_map_base: 0x000000000ea46000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006cf45ce0
+ Begin Bits: [0x00000000135a0000, 0x00000000174d0000)
+ End Bits:   [0x00000000174d0000, 0x000000001b400000)
+
+Polling page: 0x0000000000ae0000
+
+CodeCache: size=245760Kb used=3093Kb max_used=3093Kb free=242666Kb
+ bounds [0x0000000002ca0000, 0x0000000002fb0000, 0x0000000011ca0000]
+ total_blobs=1196 nmethods=840 adapters=269
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2.189 Thread 0x000000001e5d7800  837       3       java.lang.System::getProperty (25 bytes)
+Event: 2.189 Thread 0x000000001e5d3800 nmethod 833 0x0000000002fa58d0 code [0x0000000002fa5a20, 0x0000000002fa5f18]
+Event: 2.189 Thread 0x000000001e527800 nmethod 836 0x0000000002fa27d0 code [0x0000000002fa2920, 0x0000000002fa2a18]
+Event: 2.190 Thread 0x000000001e5d7800 nmethod 837 0x0000000002fa4610 code [0x0000000002fa4840, 0x0000000002fa52d8]
+Event: 9.770 Thread 0x000000001e5d7800  838  s    3       java.util.Hashtable::put (104 bytes)
+Event: 9.771 Thread 0x000000001e5d7800 nmethod 838 0x0000000002fa3510 code [0x0000000002fa36e0, 0x0000000002fa3e98]
+Event: 9.771 Thread 0x000000001e5d7800  839       3       java.util.Hashtable::addEntry (87 bytes)
+Event: 9.771 Thread 0x000000001e5d7800 nmethod 839 0x0000000002fa61d0 code [0x0000000002fa6380, 0x0000000002fa69d8]
+Event: 9.771 Thread 0x000000001e5d7800  840       1       java.util.Hashtable::access$500 (5 bytes)
+Event: 9.771 Thread 0x000000001e5d7800 nmethod 840 0x0000000002fa3250 code [0x0000000002fa33a0, 0x0000000002fa3490]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 1.097 Thread 0x000000000274e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e60398 method=sun.misc.MetaIndex.mayContain(Ljava/lang/String;)Z @ 38
+Event: 1.105 Thread 0x000000000274e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e6573c method=java.lang.String.<init>([CII)V @ 18
+Event: 1.787 Thread 0x000000000274e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002ebdb1c method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 129
+Event: 1.787 Thread 0x000000000274e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002ea9efc method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 129
+Event: 1.792 Thread 0x000000000274e000 Uncommon trap: reason=range_check action=make_not_entrant pc=0x0000000002e859a8 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.937 Thread 0x000000000274e000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e3a440 method=java.lang.String.indexOf([CII[CIII)I @ 3
+Event: 1.995 Thread 0x000000000274e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002f1f43c method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 1.995 Thread 0x000000000274e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002f1f43c method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 2.003 Thread 0x000000000274e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002f3deb8 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 2.242 Thread 0x000000000274e000 Uncommon trap: reason=predicate action=maybe_recompile pc=0x0000000002ef1874 method=sun.net.www.ParseUtil.encodePath(Ljava/lang/String;Z)Ljava/lang/String; @ 36
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.274 Thread 0x000000000274e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076bc07cb0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot
+Event: 0.274 Thread 0x000000000274e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076bc07f98) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prim
+Event: 0.465 Thread 0x000000000274e000 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcee498) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.465 Thread 0x000000000274e000 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcee6a8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.468 Thread 0x000000000274e000 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcf0c30) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.468 Thread 0x000000000274e000 Exception <a 'java/security/PrivilegedActionException'> (0x000000076bcf0e40) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 1.792 Thread 0x000000000274e000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 18> (0x000000076caa1948) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 368]
+Event: 1.792 Thread 0x000000000274e000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 110> (0x000000076caa2ea0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 368]
+Event: 2.119 Thread 0x000000000274e000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d0b3060) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\methodHandles.cpp, line 1167]
+Event: 2.121 Thread 0x000000000274e000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d0c0350) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u202\12323\hotspot\src\share\vm\prims\methodHandles.cpp, line 1167]
+
+Events (10 events):
+Event: 9.771 loading class sun/nio/cs/Surrogate$Parser done
+Event: 9.771 loading class sun/nio/cs/Surrogate
+Event: 9.771 loading class sun/nio/cs/Surrogate done
+Event: 9.771 loading class sun/util/locale/provider/TimeZoneNameUtility
+Event: 9.771 loading class sun/util/locale/provider/TimeZoneNameUtility done
+Event: 9.771 loading class sun/util/locale/provider/TimeZoneNameProviderImpl
+Event: 9.771 loading class sun/util/locale/provider/TimeZoneNameProviderImpl done
+Event: 9.772 loading class sun/util/locale/provider/TimeZoneNameUtility$TimeZoneNameGetter
+Event: 9.772 loading class sun/util/locale/provider/TimeZoneNameUtility$TimeZoneNameGetter done
+Event: 9.772 loading class sun/util/resources/TimeZoneNames
+
+
+Dynamic libraries:
+0x00007ff6958a0000 - 0x00007ff6958d7000 	C:\Java\jre1.8.0_202\bin\javaw.exe
+0x00007ffa016a0000 - 0x00007ffa01890000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffa00ba0000 - 0x00007ffa00c52000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9fe6c0000 - 0x00007ff9fe963000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffa011f0000 - 0x00007ffa01293000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffa00b00000 - 0x00007ffa00b9e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9ffc40000 - 0x00007ff9ffcd7000 	C:\Windows\System32\sechost.dll
+0x00007ffa009e0000 - 0x00007ffa00b00000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffa014c0000 - 0x00007ffa01653000 	C:\Windows\System32\USER32.dll
+0x00007ff9ff240000 - 0x00007ff9ff261000 	C:\Windows\System32\win32u.dll
+0x00007ffa00e20000 - 0x00007ffa00e46000 	C:\Windows\System32\GDI32.dll
+0x00007ff9ff2f0000 - 0x00007ff9ff484000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9ff5e0000 - 0x00007ff9ff67e000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9ff490000 - 0x00007ff9ff58a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9edc60000 - 0x00007ff9edee5000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.239_none_e6c7aebd130c7608\COMCTL32.dll
+0x00007ff9ffdc0000 - 0x00007ffa000f6000 	C:\Windows\System32\combase.dll
+0x00007ff9fe640000 - 0x00007ff9fe6c0000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffa00c60000 - 0x00007ffa00c8e000 	C:\Windows\System32\IMM32.DLL
+0x000000006bcb0000 - 0x000000006bd82000 	C:\Java\jre1.8.0_202\bin\msvcr100.dll
+0x000000006c720000 - 0x000000006cfc5000 	C:\Java\jre1.8.0_202\bin\server\jvm.dll
+0x00007ffa00c90000 - 0x00007ffa00c98000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9ebf30000 - 0x00007ff9ebf39000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffa01450000 - 0x00007ffa014bf000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9ed090000 - 0x00007ff9ed09a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9fb7c0000 - 0x00007ff9fb7e4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9fb790000 - 0x00007ff9fb7bd000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff9ff590000 - 0x00007ff9ff5da000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff9f3990000 - 0x00007ff9f399f000 	C:\Java\jre1.8.0_202\bin\verify.dll
+0x00007ff9e82d0000 - 0x00007ff9e82f9000 	C:\Java\jre1.8.0_202\bin\java.dll
+0x00007ff9ebef0000 - 0x00007ff9ebf06000 	C:\Java\jre1.8.0_202\bin\zip.dll
+0x00007ffa00300000 - 0x00007ffa009e0000 	C:\Windows\System32\SHELL32.dll
+0x00007ffa00e50000 - 0x00007ffa00ef9000 	C:\Windows\System32\shcore.dll
+0x00007ff9fe970000 - 0x00007ff9ff0eb000 	C:\Windows\System32\windows.storage.dll
+0x00007ff9fe590000 - 0x00007ff9fe5af000 	C:\Windows\System32\profapi.dll
+0x00007ff9fe5d0000 - 0x00007ff9fe61a000 	C:\Windows\System32\powrprof.dll
+0x00007ff9fe580000 - 0x00007ff9fe590000 	C:\Windows\System32\UMPDC.dll
+0x00007ffa013f0000 - 0x00007ffa01442000 	C:\Windows\System32\shlwapi.dll
+0x00007ff9fe620000 - 0x00007ff9fe631000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ff9ff2d0000 - 0x00007ff9ff2e7000 	C:\Windows\System32\cryptsp.dll
+0x00007ff9f8b60000 - 0x00007ff9f8b6d000 	C:\Java\jre1.8.0_202\bin\management.dll
+0x00007ff9e7d00000 - 0x00007ff9e7d1a000 	C:\Java\jre1.8.0_202\bin\net.dll
+0x00007ff9f0d20000 - 0x00007ff9f0ef6000 	C:\Windows\SYSTEM32\urlmon.dll
+0x00007ff9f1200000 - 0x00007ff9f14a6000 	C:\Windows\SYSTEM32\iertutil.dll
+0x00007ff9fdfc0000 - 0x00007ff9fdfcc000 	C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x00007ff9fddf0000 - 0x00007ff9fde57000 	C:\Windows\system32\mswsock.dll
+0x00007ff9ea400000 - 0x00007ff9ea416000 	C:\Windows\system32\napinsp.dll
+0x00007ff9ea3e0000 - 0x00007ff9ea3fa000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ff9fdb90000 - 0x00007ff9fdc5a000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ff9ffdb0000 - 0x00007ff9ffdb8000 	C:\Windows\System32\NSI.dll
+0x00007ff9fdb50000 - 0x00007ff9fdb8a000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ff9ea7a0000 - 0x00007ff9ea7ae000 	C:\Windows\System32\winrnr.dll
+0x00007ff9fc5d0000 - 0x00007ff9fc5ec000 	C:\Windows\system32\NLAapi.dll
+0x00007ff9fb660000 - 0x00007ff9fb675000 	C:\Windows\system32\wshbth.dll
+0x000000006ed60000 - 0x000000006ed86000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x00007ff9eef20000 - 0x00007ff9eef2a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ff9f5ba0000 - 0x00007ff9f5c17000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ff9ff680000 - 0x00007ff9ff6a6000 	C:\Windows\System32\bcrypt.dll
+0x00007ff9e7ce0000 - 0x00007ff9e7cf2000 	C:\Java\jre1.8.0_202\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=MS949 
+java_command: Main 1
+java_class_path (initial): C:\enavi\sample\mnsHttpClient\build\classes;C:\enavi\sample\mnsHttpClient\lib\slf4j-api-1.7.12.jar;C:\enavi\sample\mnsHttpClient\lib\json-lib-2.4-jdk15.jar;C:\enavi\sample\mnsHttpClient\lib\log4j-slf4j-impl-2.5.jar;C:\enavi\sample\mnsHttpClient\lib\log4j-1.2.14.jar;C:\enavi\sample\mnsHttpClient\lib\log4j-api-2.5.jar;C:\enavi\sample\mnsHttpClient\lib\log4j-core-2.5.jar;C:\enavi\sample\mnsHttpClient\lib\log4j-over-slf4j-1.7.18.jar;C:\enavi\sample\mnsHttpClient\lib\log4jdbc-1.2.jar;C:\enavi\sample\mnsHttpClient\lib\commons-lang-2.6.jar;C:\enavi\sample\mnsHttpClient\lib\ezmorph-1.0.6.jar;C:\enavi\sample\mnsHttpClient\lib\commons-logging-1.1.1.jar;C:\enavi\sample\mnsHttpClient\lib\commons-collections4-4.1.jar;C:\enavi\sample\mnsHttpClient\lib\commons-collections-3.2.1.jar;C:\enavi\sample\mnsHttpClient\lib\commons-beanutils-1.8.3.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\Git\cmd;C:\nodejs\;C:\VSCode\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.86)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16564008k(6777924k free), swap 32110628k(6004k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Aug 06 16:52:34 2019
+timezone: 대한민국 표준시
+elapsed time: 9 seconds (0d 0h 0m 9s)
+

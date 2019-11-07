@@ -1,0 +1,4 @@
+{"reqHeaders":"HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP\/1.1, content: CompositeByteBuf(ridx: 0, widx: 4158, cap: 4158, components=2))\nPOST \/ HTTP\/1.1\nUser-Agent: MMSClient\/0.9.1\nContent-type: application\/json;charset:UTF-8;\nwriteMessageForVisitedSc: Y\nsrcMRN: urn:mrn:kr:device:neonexsoft:mms1\nsrcMMSSessionId: db11822f\ndstMRN: urn:mrn:kr:device:neonexsoft:mms3\nContent-Length: 4158\nHost: 192.168.81.43:8088\nConnection: Keep-Alive\nAccept-Encoding: gzip,deflate"
+"srcMRN":"urn:mrn:kr:service:instance:neonexsoft:sp2"
+"dstMRN":"urn:mrn:kr:vessel:neonexsoft:sc1"
+"content":"안녕 hi urn:mrn:kr:vessel:neonexsoft:sc1"}

@@ -1,0 +1,4 @@
+2019-11-05 04:26:11,347 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] Starting McmApplication on d2ff4335b7ab with PID 1 (/app/mcm/mcm.jar started by root in /app/mcm)
+2019-11-05 04:26:11,389 DEBUG kr.co.nexsys.mcp.mcm.McmApplication [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-11-05 04:26:11,390 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] The following profiles are active: development,testdb,sql-debug
+2019-11-05 04:26:21,614 INFO kr.co.nexsys.mcp.mcm.McmApplication [main] Started McmApplication in 12.5 seconds (JVM running for 15.015)

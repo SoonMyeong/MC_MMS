@@ -1,0 +1,37 @@
+2019-11-05 04:26:11,625 ERROR kr.ac.kaist.mms_server.MMSConfiguration [main] Now setting MMS configuration.
+2019-11-05 04:26:11,827 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  Found recource [./MMS-configuration/MMS.conf].
+2019-11-05 04:26:11,829 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  Configuration items that are set by CLI arguments are ignored from resource [./MMS-configuration/MMS.conf].
+2019-11-05 04:26:11,971 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MMS_MRN=urn:mrn:kr:device:neonexsoft:mms3
+2019-11-05 04:26:11,973 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  HTTP_PORT=8088
+2019-11-05 04:26:11,981 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  HTTPS_ENABLED=true
+2019-11-05 04:26:11,982 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  HTTPS_PORT=444
+2019-11-05 04:26:11,990 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MNS_HOST=mcm
+2019-11-05 04:26:11,991 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MNS_PORT=8588
+2019-11-05 04:26:11,992 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_HOST=rabbitmq-db
+2019-11-05 04:26:11,993 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_PORT=5672
+2019-11-05 04:26:11,994 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_MANAGING_HOST=rabbitmq-db
+2019-11-05 04:26:11,995 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_MANAGING_PORT=15672
+2019-11-05 04:26:11,996 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_MANAGING_PROTOCOL=http
+2019-11-05 04:26:11,997 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_USER=rabbitmq
+2019-11-05 04:26:11,997 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_PASSWD=rabbitmq
+2019-11-05 04:26:11,998 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  RABBIT_MQ_CONN_POOL=250
+2019-11-05 04:26:11,999 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  WEB_LOG_PROVIDING=true
+2019-11-05 04:26:12,000 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  WEB_MANAGING=true
+2019-11-05 04:26:12,021 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MAX_BRIEF_LOG_LIST_SIZE=200
+2019-11-05 04:26:12,023 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MAX_CONTENT_SIZE=41943040bytes
+2019-11-05 04:26:12,024 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  WAITING_MESSAGE_TIMEOUT=3000ms
+2019-11-05 04:26:12,026 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  REDIS_PORT=6379
+2019-11-05 04:26:12,027 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  REDIS_HOST=redis
+2019-11-05 04:26:12,028 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MMS_URL=http://192.168.81.43:8088
+2019-11-05 04:26:12,029 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  MMS_IP=192.168.81.43
+2019-11-05 04:26:12,031 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  HOME_MANAGER_URL=http://192.168.81.57:8081
+2019-11-05 04:26:12,062 WARN kr.ac.kaist.mms_server.MMSConfiguration [main]  KEYSTORE=/u3+7QAAAAIAAAABAAAAAQANbW1zLWthaXN0LmNvbQAAAWux7+......
+2019-11-05 04:26:14,457 DEBUG org.apache.http.client.protocol.RequestAddCookies [main] CookieSpec selected: default
+2019-11-05 04:26:14,512 DEBUG org.apache.http.client.protocol.RequestAuthCache [main] Auth cache not set in the context
+2019-11-05 04:26:14,610 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager [main] Connection request: [route: {}->http://192.168.81.57:8081][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2019-11-05 04:26:14,637 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager [main] Connection leased: [id: 0][route: {}->http://192.168.81.57:8081][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2019-11-05 04:26:14,697 DEBUG org.apache.http.impl.execchain.MainClientExec [main] Opening connection {}->http://192.168.81.57:8081
+2019-11-05 04:26:14,738 DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator [main] Connecting to /192.168.81.57:8081
+2019-11-05 04:26:35,805 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection [main] http-outgoing-0: Shutdown connection
+2019-11-05 04:26:35,809 DEBUG org.apache.http.impl.execchain.MainClientExec [main] Connection discarded
+2019-11-05 04:26:35,812 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager [main] Connection released: [id: 0][route: {}->http://192.168.81.57:8081][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]

@@ -1,0 +1,3 @@
+# Server Setting
+server:
+  port: 9088

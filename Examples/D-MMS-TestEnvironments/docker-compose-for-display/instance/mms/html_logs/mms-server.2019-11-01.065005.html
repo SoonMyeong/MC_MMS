@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Fri Nov 01 06:46:14 GMT 2019</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Date">Date</td>
+<td class="Thread">Thread</td>
+<td class="Level">Level</td>
+<td class="Logger">Logger</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="debug even">
+<td class="Date">06:46:18.420</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.c.protocol.RequestAddCookies</td>
+<td class="Message">CookieSpec selected: default</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.475</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.c.protocol.RequestAuthCache</td>
+<td class="Message">Auth cache not set in the context</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.568</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection request: [route: {}-&gt;http://192.168.81.57:8081][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.691</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection leased: [id: 0][route: {}-&gt;http://192.168.81.57:8081][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.750</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.impl.execchain.MainClientExec</td>
+<td class="Message">Opening connection {}-&gt;http://192.168.81.57:8081</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.779</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.DefaultHttpClientConnectionOperator</td>
+<td class="Message">Connecting to /192.168.81.57:8081</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.866</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.DefaultHttpClientConnectionOperator</td>
+<td class="Message">Connection established 172.18.0.6:48618&lt;-&gt;192.168.81.57:8081</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.867</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.impl.execchain.MainClientExec</td>
+<td class="Message">Executing request GET /mms/urn:mrn:kr:device:neonexsoft:mms2 HTTP/1.1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.867</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.impl.execchain.MainClientExec</td>
+<td class="Message">Target auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.868</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.impl.execchain.MainClientExec</td>
+<td class="Message">Proxy auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.882</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; GET /mms/urn:mrn:kr:device:neonexsoft:mms2 HTTP/1.1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.914</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; User-Agent: MMSServer/0.9.5</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.917</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; srcMRN: urn:mrn:kr:device:neonexsoft:mms2</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.917</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; mrn: urn:mrn:kr:device:neonexsoft:mms2</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.917</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; Host: 192.168.81.57:8081</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.917</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; Connection: Keep-Alive</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.918</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; Accept-Encoding: gzip,deflate</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.919</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;GET /mms/urn:mrn:kr:device:neonexsoft:mms2 HTTP/1.1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.919</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;User-Agent: MMSServer/0.9.5[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.920</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;srcMRN: urn:mrn:kr:device:neonexsoft:mms2[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.920</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;mrn: urn:mrn:kr:device:neonexsoft:mms2[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.920</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;Host: 192.168.81.57:8081[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.920</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:18.921</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:18.921</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.699</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 200 [\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.709</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Content-Type: application/json;charset=UTF-8[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.710</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Transfer-Encoding: chunked[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.712</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Date: Fri, 01 Nov 2019 06:47:45 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.713</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.715</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;58[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.716</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;{&quot;mmsDto&quot;:{&quot;mrn&quot;:&quot;urn:mrn:kr:device:neonexsoft:mms2&quot;,&quot;url&quot;:&quot;http://192.168.81.83:8088&quot;}}[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.719</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.727</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.778</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; HTTP/1.1 200 </td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.779</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Content-Type: application/json;charset=UTF-8</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.779</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Transfer-Encoding: chunked</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.779</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Date: Fri, 01 Nov 2019 06:47:45 GMT</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.805</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.impl.execchain.MainClientExec</td>
+<td class="Message">Connection can be kept alive indefinitely</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.809</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection [id: 0][route: {}-&gt;http://192.168.81.57:8081] can be kept alive indefinitely</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:20.809</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.DefaultManagedHttpClientConnection</td>
+<td class="Message">http-outgoing-0: set socket timeout to 0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:20.810</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection released: [id: 0][route: {}-&gt;http://192.168.81.57:8081][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.257</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.i.l.InternalLoggerFactory</td>
+<td class="Message">Using SLF4J as the default logging framework</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.270</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.handler.ssl.OpenSsl</td>
+<td class="Message">netty-tcnative not in the classpath; OpenSslEngine will be unavailable.</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.703</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">-Dio.netty.noUnsafe: false</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.706</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">Java version: 8</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.728</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">sun.misc.Unsafe.theUnsafe: available</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.762</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">sun.misc.Unsafe.copyMemory: available</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.765</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">java.nio.Buffer.address: available</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.766</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">direct buffer constructor: available</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.781</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">java.nio.Bits.unaligned: available, true</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.790</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.797</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.internal.PlatformDependent0</td>
+<td class="Message">java.nio.DirectByteBuffer.&lt;init&gt;(long, int): available</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.827</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">sun.misc.Unsafe: available</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.857</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">-Dio.netty.tmpdir: /tmp (java.io.tmpdir)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.880</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">-Dio.netty.bitMode: 64 (sun.arch.data.model)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.911</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">-Dio.netty.maxDirectMemory: 466092032 bytes</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.930</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">-Dio.netty.uninitializedArrayAllocationThreshold: -1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.950</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.internal.CleanerJava6</td>
+<td class="Message">java.nio.ByteBuffer.cleaner(): available</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:25.977</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">-Dio.netty.noPreferDirect: false</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:25.993</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.handler.ssl.JdkSslContext</td>
+<td class="Message">Default protocols (JDK): [TLSv1.2, TLSv1.1, TLSv1] </td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.208</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.handler.ssl.JdkSslContext</td>
+<td class="Message">Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.220</td>
+<td class="Thread">Finalizer</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection manager is shutting down</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.227</td>
+<td class="Thread">Finalizer</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.DefaultManagedHttpClientConnection</td>
+<td class="Message">http-outgoing-0: Close connection</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.256</td>
+<td class="Thread">Finalizer</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">o.a.h.i.c.PoolingHttpClientConnectionManager</td>
+<td class="Message">Connection manager shut down</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.312</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.c.MultithreadEventLoopGroup</td>
+<td class="Message">-Dio.netty.eventLoopThreads: 4</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.448</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.i.InternalThreadLocalMap</td>
+<td class="Message">-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.461</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.u.i.InternalThreadLocalMap</td>
+<td class="Message">-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.530</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.channel.nio.NioEventLoop</td>
+<td class="Message">-Dio.netty.noKeySetOptimization: false</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.538</td>
+<td class="Thread">Thread-1</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.channel.nio.NioEventLoop</td>
+<td class="Message">-Dio.netty.selectorAutoRebuildThreshold: 512</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.555</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.util.internal.PlatformDependent</td>
+<td class="Message">org.jctools-core.MpscChunkedArrayQueue: available</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.681</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.channel.DefaultChannelId</td>
+<td class="Message">-Dio.netty.processId: 8 (auto-detected)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.700</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.NetUtil</td>
+<td class="Message">-Djava.net.preferIPv4Stack: false</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.710</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.NetUtil</td>
+<td class="Message">-Djava.net.preferIPv6Addresses: false</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.717</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.NetUtil</td>
+<td class="Message">Loopback interface: lo (lo, 127.0.0.1)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.719</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.NetUtil</td>
+<td class="Message">/proc/sys/net/core/somaxconn: 128</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.732</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.channel.DefaultChannelId</td>
+<td class="Message">-Dio.netty.machineId: 02:42:ac:ff:fe:12:00:06 (auto-detected)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.780</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.ResourceLeakDetector</td>
+<td class="Message">-Dio.netty.leakDetection.level: simple</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.787</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.util.ResourceLeakDetector</td>
+<td class="Message">-Dio.netty.leakDetection.targetRecords: 4</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.908</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.numHeapArenas: 4</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.908</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.numDirectArenas: 4</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.909</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.pageSize: 8192</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.910</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.maxOrder: 11</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.917</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.chunkSize: 16777216</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.919</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.tinyCacheSize: 512</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.919</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.smallCacheSize: 256</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.924</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.normalCacheSize: 64</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.925</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.maxCachedBufferCapacity: 32768</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.925</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.cacheTrimInterval: 8192</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.926</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.cacheTrimIntervalMillis: 0</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.928</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.useCacheForAllThreads: true</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.929</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">i.n.buffer.PooledByteBufAllocator</td>
+<td class="Message">-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.981</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.buffer.ByteBufUtil</td>
+<td class="Message">-Dio.netty.allocator.type: pooled</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Date">06:46:26.982</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.buffer.ByteBufUtil</td>
+<td class="Message">-Dio.netty.threadLocalDirectBufferSize: 0</td>
+</tr>
+
+<tr class="debug even">
+<td class="Date">06:46:26.983</td>
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.netty.buffer.ByteBufUtil</td>
+<td class="Message">-Dio.netty.maxThreadLocalCharBufferSize: 16384</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">06:46:27.215</td>
+<td class="Thread">nioEventLoopGroup-2-1</td>
+<td class="Level">INFO</td>
+<td class="Logger">i.n.handler.logging.LoggingHandler</td>
+<td class="Message">[id: 0xaee478bd] REGISTERED</td>
+</tr>
+
+<tr class="info even">
+<td class="Date">06:46:27.219</td>
+<td class="Thread">nioEventLoopGroup-2-1</td>
+<td class="Level">INFO</td>
+<td class="Logger">i.n.handler.logging.LoggingHandler</td>
+<td class="Message">[id: 0xaee478bd] BIND: 0.0.0.0/0.0.0.0:444</td>
+</tr>
+
+<tr class="info odd">
+<td class="Date">06:46:27.221</td>
+<td class="Thread">nioEventLoopGroup-2-1</td>
+<td class="Level">INFO</td>
+<td class="Logger">i.n.handler.logging.LoggingHandler</td>
+<td class="Message">[id: 0xaee478bd, L:/0.0.0.0:444] ACTIVE</td>
+</tr>

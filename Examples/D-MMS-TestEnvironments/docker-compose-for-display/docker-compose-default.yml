@@ -1,0 +1,95 @@
+version: '3'
+
+services:
+  mms:
+    ports:
+      - 8088:8088
+    image: mmsserver:0.1
+    environment:
+      - ENV_MNS_HOST=mcm
+      - ENV_MNS_PORT=8588
+      - ENV_RABBIT_MQ_HOST=rabbitmq-db
+      - ENV_RABBIT_MQ_PORT=5672
+      - ENV_RABBIT_MQ_MANAGING_HOST=rabbitmq-db
+      - ENV_RABBIT_MQ_MANAGING_PORT=15672
+      - ENV_RABBIT_MQ_USER=rabbitmq
+      - ENV_RABBIT_MQ_PASSWD=rabbitmq
+      - ENV_REDIS_HOST=redis
+      - ENV_REDIS_PORT=6379
+      - ENV_HOME_MANAGER_URL=http://192.168.81.57:8081
+    volumes:
+      - ./instance/mms/logs/:/app/mms/logs/
+      - ./instance/mms/html_logs/:/var/mms/logs/
+      - ./instance/mms/vdes_files:/app/mms/vdes_files
+      - ./instance/mms/NAS:/NAS
+    stdin_open: true
+    tty: true
+    restart: always
+    depends_on:
+      - mcm
+      - rabbitmq-db
+      - redis
+
+  mcm:
+    image: mcm:0.1
+    ports:
+      - 8588:8588
+    environment:
+      - dbHost=mcmdb
+      - dbPort=3306
+      - dbUser=mcm
+      - dbPassword=mcm1234
+      - flywayLocations=filesystem:/app/mcm/migration
+    volumes:
+      - ./instance/mcm/migration/:/app/mcm/migration
+      - ./instance/mcm/logs:/app/mcm/logs
+    stdin_open: true
+    tty: true
+    restart: always
+    depends_on:
+      - mcmdb
+
+  mcmdb:
+    image: mariadb:10.3
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=mcmdb
+      - MYSQL_USER=mcm
+      - MYSQL_PASSWORD=mcm1234
+    volumes:
+      - ./instance/mcmdb:/var/lib/mysql
+    stdin_open: true
+    tty: true
+    command:
+      '--innodb-flush-method=fsync --lower_case_table_names=1'
+
+  redis:
+    image: redis:5.0.3
+    ports:
+      - 6379:6379
+    volumes:
+      - ./instance/redis/:/data
+    labels:
+      - "name=redis"
+      - "mode=standalone"
+    command: redis-server /data/redis.conf
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+  rabbitmq-db:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+
+
