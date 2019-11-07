@@ -44,15 +44,6 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 **/
 /* -------------------------------------------------------- */
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpMethod;
 import kr.ac.kaist.message_casting.MessageCastingHandler;
 import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel.ConnectionThread;
@@ -60,6 +51,10 @@ import kr.ac.kaist.mms_server.ErrorCode;
 import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
 import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 class MessageOrderingHandler {
 	
@@ -119,6 +114,7 @@ class MessageOrderingHandler {
 			if (SessionManager.getNumFromMapSrcDstPairAndLastSeqNum(srcDstPair) != -1) { //Reset sessions in SessionManager related to srcMRN and dstMRN pair.
 				//System.out.println("Reset sessions in SessionManager related to srcMRN and dstMRN pair.");
 				int itemListSize = itemList.size();
+
 				while (itemListSize > 0) {
 					//System.out.println("Reset sessions");
 					itemList.get(0).setExceptionFlag(true);
@@ -197,7 +193,7 @@ class MessageOrderingHandler {
 			}
 			try {
 				//System.out.println("RELAYING_TO_SERVER_SEQUENTIALLY getSessionID="+itemList.get(0).getSessionId());
-				if (itemList != null && itemList.size()>0 && itemList.get(0).getSessionId().equals(bean.getSessionId())) { //MUST be THIS session.
+			//	if (itemList != null && itemList.size()>0 && itemList.get(0).getSessionId().equals(bean.getSessionId())) { //MUST be THIS session.
 					if (SessionManager.getNumFromMapSrcDstPairAndLastSeqNum(srcDstPair) == itemList.get(0).getPreSeqNum() || 
 							itemList.get(0).getWaitingCount() > 0 ||
 							itemList.get(0).isExceptionOccured()) {
@@ -218,12 +214,12 @@ class MessageOrderingHandler {
 						sessionBlocker.sleep(MMSConfiguration.getWaitingMessageTimeout()); //Block (by sleep) this relaying process if it's not this session's turn with sequence number.
 						itemList.get(0).incWaitingCount();
 					}
-				}
-				else {
+			//	}
+			//	else {
 					//System.out.println("Block (by sleep) this relaying process if it's not this session's turn.");
 					sessionBlocker.sleep(MMSConfiguration.getWaitingMessageTimeout()); //Block (by sleep) this relaying process if it's not this session's turn.
 					numCheckingItemList++;
-				}
+			//	}
 			} 
 			catch (InterruptedException e) {
 				message = processThisThread(itemList, bean, mch);

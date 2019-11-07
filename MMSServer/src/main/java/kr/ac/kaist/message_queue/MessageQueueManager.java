@@ -61,23 +61,19 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 */
 /* -------------------------------------------------------- */
 
-import java.io.IOException;
-
+import io.netty.handler.codec.http.HttpMethod;
+import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
+import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel;
+import kr.ac.kaist.mms_server.ErrorCode;
+import kr.ac.kaist.mms_server.MMSConfiguration;
+import kr.ac.kaist.mms_server.MMSLog;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.HttpMethod;
-import kr.ac.kaist.message_queue.v2.MessageLimitSizeDequeuer;
-import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
-import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel;
-import kr.ac.kaist.mms_server.ErrorCode;
-import kr.ac.kaist.mms_server.MMSConfiguration;
-import kr.ac.kaist.mms_server.MMSLog;
+import java.io.IOException;
 
 
 public class MessageQueueManager {
@@ -97,8 +93,8 @@ public class MessageQueueManager {
 	}
 	
 	public void dequeueMessage (MRH_MessageInputChannel.ChannelBean bean) {
-//		MessageQueueDequeuer mqd = new MessageQueueDequeuer(this.sessionId);
-		MessageQueueDequeuer mqd = new MessageLimitSizeDequeuer(this.sessionId);
+		MessageQueueDequeuer mqd = new MessageQueueDequeuer(this.sessionId);
+//		MessageQueueDequeuer mqd = new MessageLimitSizeDequeuer(this.sessionId);
 		mqd.dequeueMessage(bean);
 	}
 	

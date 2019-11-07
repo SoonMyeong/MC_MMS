@@ -73,23 +73,18 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 **/
 /* -------------------------------------------------------- */
 
-import java.io.*;
-import java.net.*;
-import java.nio.charset.Charset;
-import java.text.ParseException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
-
+import kr.ac.kaist.mms_server.MMSConfiguration;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import kr.ac.kaist.mms_server.MMSConfiguration;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.*;
 
 public class MNSDummy {
 	private static int UNICASTING = 1;
@@ -114,7 +109,7 @@ public class MNSDummy {
 		//       (Geo-location added version)   IP_Address:PortNumber:Model:Geo-location
 		//
 		//
-		
+
 		MRNtoIP.put("urn:mrn:imo:imo-no:1000001","223.39.131.117:0:1");
 		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-SCSession","118.220.143.130:0:1");
 		MRNtoIP.put("urn:mrn:imo:imo-no:1000001-kaist","172.25.0.11:0:1");
@@ -133,7 +128,7 @@ public class MNSDummy {
 		MRNtoIP.put("urn:mrn:imo:imo-no:testSC7","143.248.55.83:0:1");
 		MRNtoIP.put("urn:mrn:imo:imo-no:testSC8","143.248.55.83:0:1");
 		MRNtoIP.put("urn:mrn:imo:imo-no:testSC9","143.248.55.83:0:1");
-		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","1.220.41.11:0:1");
+		//MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","1.220.41.11:0:1");
 		MRNtoIP.put("urn:mrn:mcp:vessel:smart:imo-9775763","1.220.41.11:0:1");
 		MRNtoIP.put("urn:mrn:smart-navi:client:sv40","106.240.253.98:0:1");
 		MRNtoIP.put("urn:mrn:smart-navi:device:dummy-msc","114.141.253.194:0:1");
@@ -277,7 +272,9 @@ public class MNSDummy {
 		MRNtoIP.put("urn:mrn:kr:vessel:mmsi:440956000","1.1.1.1:0:1");
 		MRNtoIP.put("urn:mrn:kr:vessel:mmsi:441178000","1.1.1.1:0:1");
 		MRNtoIP.put("urn:mrn:kr:vessel:mmsi:000000001","1.1.1.1:0:1");
-		
+
+		MRNtoIP.put("urn:mrn:smart-navi:device:geo-server","127.0.0.1:2");
+		MRNtoIP.put("urn:mrn:mcl:vessel:dma:poul-lowenorn","127.0.0.1:0:1");
 		//-----------------------------------------------------
 
 		while(true)

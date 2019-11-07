@@ -1,25 +1,21 @@
 package kr.ac.kaist.message_queue;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeoutException;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-
 import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
 import kr.ac.kaist.mms_server.ErrorCode;
 import kr.ac.kaist.mms_server.MMSConfiguration;
 import kr.ac.kaist.mms_server.MMSLog;
-import kr.ac.kaist.mms_server.MMSLogForDebug;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeoutException;
 
 /* -------------------------------------------------------- */
 /** 
@@ -179,7 +175,7 @@ public class MessageQueueEnqueuer {
 			args.put("x-max-priority", 10);
 //			args.put("maxPriority", 10);
 			
-			channel.queueDeclare(queueName, true, false, false, args);
+			channel.queueDeclare(queueName, true, false, false, null);
 			
 			channel.basicPublish("", queueName, null, bean.getReq().content().toString(Charset.forName("UTF-8")).trim().getBytes());
 			channel.close(320, "Service stopped.");

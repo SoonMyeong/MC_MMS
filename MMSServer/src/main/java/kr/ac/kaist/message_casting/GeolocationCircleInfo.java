@@ -15,7 +15,6 @@ public class GeolocationCircleInfo {
 	private float geoRadius = 0;
 	
 	public GeolocationCircleInfo() {
-		
 		geoLat = 0;
 		geoLong = 0;
 		geoRadius = 0;

@@ -192,49 +192,31 @@ Modifier : Jaehee ha (jaehee.ha@kaist.ac.kr)
 */
 /* -------------------------------------------------------- */
 
-import java.awt.TrayIcon.MessageType;
+import com.rabbitmq.client.*;
+import io.netty.channel.ChannelHandlerContext;
+import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
+import kr.ac.kaist.message_relaying.MessageTypeDecider;
+import kr.ac.kaist.message_relaying.SessionManager;
+import kr.ac.kaist.mms_server.ChannelTerminateListener;
+import kr.ac.kaist.mms_server.ErrorCode;
+import kr.ac.kaist.mms_server.MMSConfiguration;
+import kr.ac.kaist.mms_server.MMSLog;
+import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.rabbitmq.client.AMQP;
-import com.rabbitmq.client.AMQP.Basic;
-import com.rabbitmq.client.AlreadyClosedException;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.Consumer;
-import com.rabbitmq.client.ConsumerCancelledException;
-import com.rabbitmq.client.DefaultConsumer;
-import com.rabbitmq.client.Envelope;
-import com.rabbitmq.client.GetResponse;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
-import kr.ac.kaist.message_relaying.MRH_MessageInputChannel;
-import kr.ac.kaist.message_relaying.MRH_MessageOutputChannel;
-import kr.ac.kaist.message_relaying.MessageTypeDecider;
-import kr.ac.kaist.message_relaying.SessionManager;
-import kr.ac.kaist.mms_server.Base64Coder;
-import kr.ac.kaist.mms_server.ChannelTerminateListener;
-import kr.ac.kaist.mms_server.ErrorCode;
-import kr.ac.kaist.mms_server.MMSConfiguration;
-import kr.ac.kaist.mms_server.MMSLog;
-import kr.ac.kaist.mms_server.MMSLogForDebug;
-import kr.ac.kaist.seamless_roaming.SeamlessRoamingHandler;
 
 
 
 public class MessageQueueDequeuer extends Thread{
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(MessageQueueDequeuer.class);
 	protected String sessionId = "";
 	protected String duplicationId="";
@@ -323,7 +305,7 @@ public class MessageQueueDequeuer extends Thread{
 			Map<String, Object> args = new HashMap<String, Object>();
 			args.put("x-max-priority", 10);
 
-			mqChannel.queueDeclare(queueName, true, false, false, args);
+			mqChannel.queueDeclare(queueName, true, false, false, null);
 		}
 		catch (IOException e) {
 			mmsLog.warn(logger, sessionId, ErrorCode.RABBITMQ_CHANNEL_OPEN_ERROR.toString());
